@@ -114,8 +114,9 @@ h3{font-family:"Noto Serif TC",serif;font-size:21px;line-height:1.45;margin:0 0 
 .who th,.who td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 .who th{background:var(--green-soft);color:var(--deep);font-weight:700}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
-.gap{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.gap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
 .gap div{border:1.5px dashed var(--gold);border-radius:14px;padding:12px 14px;font-size:14.5px;background:#fffaf0}
+@media (max-width:980px){.gap{grid-template-columns:1fr 1fr}}
 @media (max-width:760px){.qs,.gap{grid-template-columns:1fr}.deep .in{padding:0 18px 18px}}
 .mapsec .schem{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:10px}
 .mapsec .schem svg{width:100%;height:auto;display:block}
@@ -160,6 +161,10 @@ main img.zoomable:hover{filter:brightness(1.04)}
 .fatekey i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .bigsay{font-family:"Noto Serif TC",serif;font-size:clamp(20px,2.6vw,25px);line-height:1.55;color:#a12d21;margin:0 0 12px}
 @media (max-width:760px){.fate{grid-template-columns:1fr}}
+.eia{display:flex;gap:14px;align-items:flex-start;background:#fdecea;border:1px solid #f1c3bd;border-left:6px solid #a12d21;border-radius:14px;padding:16px 18px;margin-top:16px}
+.eia .yr{flex:none;font-family:"Noto Serif TC",serif;font-weight:900;font-size:30px;line-height:1;color:#a12d21}
+.eia .yr small{display:block;font-size:12px;font-weight:700;font-family:"Noto Sans TC",sans-serif;margin-top:4px}
+.eia p{margin:0;font-size:15.5px;color:#4a1f18}
 .figcap{font-size:13px;color:var(--muted);margin-top:8px}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 0}
@@ -241,6 +246,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <div class="label" style="color:var(--gold)">最新進度・2026/10/11</div>
       <h2 style="font-size:clamp(22px,3vw,28px)">都委會已「原則同意」，但還沒有最後定案</h2>
       <p style="margin:6px 0 0">2026/7/21 內政部都委會第 1104 次會議，把第三期計畫<strong>修正後原則同意</strong>。依程序，修正版還要在地方<strong>補辦公開展覽與說明會</strong>、接受新的陳情，必要時再開專案小組，最後才核定。另外，環境部表示要依法辦理環評變更，水利署的出流管制計畫也仍在審查。也就是說——現在說話，還來得及。</p>
+      <div class="eia"><div class="yr">1996<small>舊環評</small></div><p><b>森林變建地，用的還是 30 年前的環評。</b>高雄新市鎮的環評在 1996 年通過，那時這片林子還沒種下。這次國土署沒有重做完整環評，只補做「環境差異分析」；環境部說要等都市計畫程序走完才會審查。<b>新的環評，到現在還沒有審過。</b><a href="#eia">為什麼這很重要 →</a></p></div>
       <div style="margin-top:18px"><figure class="aifig"><img src="img/ai-timeline.jpg" alt="第三期審議進度時程圖" loading="lazy" data-cap="第三期審議進度時程圖｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>審議進度：7/21 原則同意 → 官方修正 → 最後審核階段 → 最快 2027 年底區段徵收。<span class="aitag">AI 示意</span></figcaption></figure></div>
     </div>
   </div>
@@ -595,9 +601,24 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       </div>
     </details>
 
-    <h3 style="margin-top:30px">還缺的三份資料</h3>
-    <p style="margin:0;font-size:15.5px">只要這三份資料公開，爭議會清楚很多。這也是最實際、最不分立場的要求。</p>
+    <details id="eia">
+      <summary><span class="no">7</span>環評：30 年前的環評，能決定今天的森林嗎？</summary>
+      <div class="in">
+        <p><b>先說清楚</b>：不是「環評沒通過」，而是<b>這次變更還沒有重做完整環評</b>。也沒有任何證據顯示環評委員有不當行為——本頁記錄的利益迴避爭議發生在都市計畫審議，與環評是兩件事。</p>
+        <ul>
+          <li><b>1996 年</b>：高雄新市鎮整體開發的環境影響評估，經當時的環保署審查通過。那時台糖還沒在這裡平地造林（2002 年才開始）。</li>
+          <li><b>這次的做法</b>：國土署以「環境影響差異分析」處理第三期變更——也就是只比較新方案和舊環評差多少。護樹團體批評，以「變更幅度在一定比例內」為由不重做環評，是把案子切開來闖關，要求<b>重啟完整環評</b>。</li>
+          <li><b>環境部的立場</b>（2026/7）：依法審查；只要開發內容與原環評承諾不同，就要辦理環評變更。但要等國土署完成都市計畫程序後，案件才會送到環境部。</li>
+        </ul>
+        <p><b>為什麼這很重要</b>：1996 年的評估裡，沒有一片長了二十多年、有 8 種保育類鳥類棲息的造林地，也沒有凱米、康芮這種等級的暴雨經驗。用當年的基準來判斷今天的影響，正是這次爭議最需要被公開檢驗的地方。</p>
+        <p><b>接下來可以盯的</b>：差異分析報告何時送環境部、審查會是否公開旁聽、是否被要求重做完整環評。</p>
+      </div>
+    </details>
+
+    <h3 style="margin-top:30px">還缺的四份資料</h3>
+    <p style="margin:0;font-size:15.5px">只要這四份資料公開，爭議會清楚很多。這也是最實際、最不分立場的要求。</p>
     <div class="gap">
+      <div>📋 <b>完整的新環評</b><br>以今天的林地與氣候條件，重新評估開發影響。</div>
       <div>🌳 <b>逐株樹木普查</b><br>到底有多少樹、樹種與胸徑分布？</div>
       <div>💧 <b>流域尺度水文模擬</b><br>不只基地內，整條典寶溪的淹水風險變化。</div>
       <div>🛣 <b>舊 1-1 與新 1-1 比較</b><br>交通效益、徵收成本、生態衝擊並列。</div>
@@ -717,6 +738,8 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <li><a href="https://udn.com/news/story/7327/9528174" target="_blank" rel="noopener">聯合報〈橋頭糖廠百頃森林變建地案 護樹團體爆審查委員兼台糖獨董〉2026/5/27</a></li>
       <li><a href="https://money.udn.com/money/story/7307/9529223" target="_blank" rel="noopener">經濟日報〈高雄新市鎮三期審議遭質疑 國土署：主持人請假迴避〉2026/5/27</a></li>
       <li><a href="https://www.ctwant.com/article/482950/" target="_blank" rel="noopener">CTWANT〈高雄新市鎮三期審議遭質疑 國土署：委員已迴避、程序未定案〉2026/5/28</a></li>
+      <li><a href="https://www.nlma.gov.tw/uploads/files/2636955c9ae9aa94c9bfdad6f4318204.pdf" target="_blank" rel="noopener">內政部〈變更高雄新市鎮特定區主要計畫〉計畫書（記載新市鎮環評於 1996 年審查通過）</a></li>
+      <li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=O0090001" target="_blank" rel="noopener">全國法規資料庫〈環境影響評估法〉</a></li>
       <li><a href="https://ourisland.pts.org.tw/content/11769" target="_blank" rel="noopener">公視我們的島〈誰來決定新市鎮：橋頭開發與糖業鐵道歷史〉</a></li>
     </ol>
     <p>插圖取自原始影片簡報（NotebookLM 生成）、〈矽谷與森林的未來抉擇〉簡報（AI 生成，已剔除未經查證的數據與人物肖像）與 AI 水彩插畫，皆為示意。本頁為個人整理的公民倡議頁面，非候選人官方網站。資料更新至 2026/10/11。</p>
@@ -739,6 +762,8 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     im.addEventListener('click',open);
     im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
   });
+  function openHash(){var h=location.hash&&document.querySelector(location.hash);if(h&&h.tagName==='DETAILS'){h.open=true;h.scrollIntoView();}}
+  window.addEventListener('hashchange',openHash); openHash();
   function close(){lb.classList.remove('open');document.body.style.overflow='';if(last)last.focus();}
   lb.addEventListener('click',close);
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close();});
