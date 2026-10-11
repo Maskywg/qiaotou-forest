@@ -130,6 +130,13 @@ h3{font-family:"Noto Serif TC",serif;font-size:21px;line-height:1.45;margin:0 0 
 .maptabs button.on{background:var(--green);color:#fff}
 .leaflet-tooltip.qt{background:rgba(255,253,247,.95);border:1px solid var(--line);color:var(--ink);font-family:"Noto Sans TC",sans-serif;font-size:13px;font-weight:700;box-shadow:none}
 @media (max-width:760px){#qtmap{height:440px}}
+.bgm-btn{position:fixed;right:16px;bottom:16px;z-index:1000;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:99px;border:1px solid var(--line);background:rgba(255,253,247,.95);color:var(--deep);font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(35,54,31,.15)}
+.bgm-btn .eq{display:inline-flex;align-items:flex-end;gap:2px;height:14px}
+.bgm-btn .eq i{width:3px;background:var(--green);border-radius:2px;height:4px}
+.bgm-btn.on .eq i{animation:eq 1s ease-in-out infinite}
+.bgm-btn.on .eq i:nth-child(2){animation-delay:.2s}.bgm-btn.on .eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{0%,100%{height:4px}50%{height:14px}}
+@media (prefers-reduced-motion:reduce){.bgm-btn.on .eq i{animation:none;height:10px}}
 .figcap{font-size:13px;color:var(--muted);margin-top:8px}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 0}
@@ -697,8 +704,32 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 </section>
 
 </main>
-<footer>聽，森林的低語・守護橋頭糖廠百頃森林</footer>
+<footer>聽，森林的低語・守護橋頭糖廠百頃森林<br>背景音樂〈微光中的勇氣〉masky87 製作（Suno）</footer>
+<audio id="bgm" src="bgm.mp3" loop preload="auto" autoplay></audio>
+<button class="bgm-btn" id="bgmBtn" type="button" aria-pressed="false" aria-label="背景音樂開關"><span class="eq"><i></i><i></i><i></i></span><span id="bgmLabel">播放音樂</span></button>
 
+<script>
+(function(){
+  var a=document.getElementById('bgm'), b=document.getElementById('bgmBtn'), lb=document.getElementById('bgmLabel');
+  var KEY='qt-bgm-off', off=false;
+  try{off=localStorage.getItem(KEY)==='1';}catch(e){}
+  a.volume=0.35;
+  function ui(){var on=!a.paused;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);lb.textContent=on?'音樂 開':'播放音樂';}
+  function play(){var p=a.play();if(p&&p.catch)p.catch(function(){});}
+  a.addEventListener('play',ui);a.addEventListener('pause',ui);
+  if(off){a.removeAttribute('autoplay');a.pause();}else{play();}
+  function unlock(){if(!off&&a.paused)play();['pointerdown','keydown','touchend'].forEach(function(e){document.removeEventListener(e,unlock);});}
+  ['pointerdown','keydown','touchend'].forEach(function(e){document.addEventListener(e,unlock);});
+  b.addEventListener('click',function(ev){ev.stopPropagation();
+    if(a.paused){off=false;play();}else{off=true;a.pause();}
+    try{localStorage.setItem(KEY,off?'1':'0');}catch(e){}
+  });
+  b.addEventListener('pointerdown',function(ev){ev.stopPropagation();});
+  var wasOn=false;
+  document.addEventListener('visibilitychange',function(){if(document.hidden){wasOn=!a.paused;a.pause();}else if(wasOn&&!off){play();}});
+  ui();
+})();
+</script>
 <script>
 (function(){
   function set(id,t,done){
