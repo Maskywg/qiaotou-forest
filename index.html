@@ -82,6 +82,18 @@ h3{font-family:"Noto Serif TC",serif;font-size:21px;line-height:1.45;margin:0 0 
 .card p{margin:0;font-size:15.5px}
 .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .fig{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.status{padding:56px 0 8px}
+.status .panel{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:18px;padding:24px 26px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 6px;list-style:none;padding:0}
+.steps li{border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.55;background:var(--bg);border:1px solid var(--line)}
+.steps li b{display:block;font-size:13px;color:var(--muted)}
+.steps li.done{background:var(--green-soft);border-color:#c9d9bb}
+.steps li.now{background:#fbf0d9;border-color:var(--gold)}
+.steps li.now b{color:var(--gold)}
+.era{display:inline-block;font-size:12px;font-weight:700;padding:1px 10px;border-radius:99px;margin-left:8px;vertical-align:middle;letter-spacing:.05em;font-family:"Noto Sans TC",sans-serif}
+.era.old{background:#ece8dc;color:#6c6858}
+.era.new{background:#fbf0d9;color:var(--gold)}
+@media (max-width:760px){.steps{grid-template-columns:1fr 1fr}}
 .figcap{font-size:13px;color:var(--muted);margin-top:8px}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 0}
@@ -157,6 +169,22 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 
 <main>
 
+<div class="status" id="now">
+  <div class="wrap">
+    <div class="panel">
+      <div class="label" style="color:var(--gold)">最新進度・2026/10/11</div>
+      <h2 style="font-size:clamp(22px,3vw,28px)">都委會已「原則同意」，但還沒有最後定案</h2>
+      <p style="margin:6px 0 0">2026/7/21 內政部都委會第 1104 次會議，把第三期計畫<strong>修正後原則同意</strong>。依程序，修正版還要在地方<strong>補辦公開展覽與說明會</strong>、接受新的陳情，必要時再開專案小組，最後才核定。另外，環境部表示要依法辦理環評變更，水利署的出流管制計畫也仍在審查。也就是說——現在說話，還來得及。</p>
+      <ol class="steps">
+        <li class="done"><b>2026/5–6</b>專案小組現勘、公益性及必要性審查</li>
+        <li class="done"><b>2026/7/21</b>都委會大會修正後原則同意</li>
+        <li class="now"><b>現在</b>補辦公展與說明會、環評變更、出流管制審查</li>
+        <li><b>最快 2027 年底</b>核定後取得土地、展開區段徵收</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
 <section id="ama">
   <div class="wrap">
     <div class="label">森林阿嬤是誰</div>
@@ -192,11 +220,14 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <p class="sub">2025 年底我做那支影片時，事情還在醞釀。十個月後，它已成了全台環團關注的議題。</p>
     <ol class="tl">
       <li><div class="d">2025/12</div><p>製作影片〈拯救百年橋頭森林〉，整理第三期開發計畫與替代方案。</p></li>
+      <li><div class="d">2025/8</div><p>在地志工與團體發起「搶救橋頭糖廠百頃森林」運動。</p></li>
+      <li><div class="d">2026/1/7</div><p>環團提出「新 1-1」替代路線：改走既有道路、直接銜接青埔站，宣稱可保留百公頃森林與糖廠，並少徵收私有地。</p></li>
       <li><div class="d">2026/3</div><p>橋頭 17 位里長公開表態支持道路開發，批評環團阻礙發展；環團與里長在說明場合爆發口角。</p></li>
-      <li><div class="d">2026/5/18</div><p>新市鎮三期第四次會議於橋頭區公所召開，焦點是 60 米寬「1-1 道路」是否照原規劃貫穿林地，雙方未達共識，都委會未當場作結論。</p></li>
+      <li><div class="d">2026/5/18</div><p>新市鎮三期第四次會議於橋頭區公所召開，焦點是 60 米寬「1-1 道路」是否照原規劃貫穿林地，雙方未達共識；5/18–22 都委會密集現勘與專案小組會議。</p></li>
+      <li><div class="d">2026/6/24</div><p>開發案進行公益性及必要性審查。</p></li>
       <li><div class="d">2026 年中</div><p>護樹團體揭露區段徵收審議小組主席同時擔任台糖獨立董事，批「球員兼裁判」；國土署回應該委員已依規請假迴避。</p></li>
       <li><div class="d">2026/7/6</div><p>環團要求重啟完整環評，批評以「環差分析」切割闖關；環境部長彭啓明表示依法審查，與原環評承諾不同就須辦理變更。</p></li>
-      <li><div class="d">2026/7/21</div><p>森林城市協會等民團帶著 4,000 人連署赴國土署抗議。內政部都委會已通過本案；國土署稱已大幅修正方案，最快 2027 年底取得土地後展開區段徵收。</p></li>
+      <li><div class="d">2026/7/21</div><p>都委會第 1104 次大會<strong>修正後原則同意</strong>：部分道路改為綠園道、規劃約 21 公頃公園兼滯洪池；會議限制媒體與民眾旁聽引發爭議。民團帶著 4,000 人連署在場外抗議。修正版仍須補辦公展、說明會後才核定，最快 2027 年底展開區段徵收。</p></li>
       <li class="ama"><div class="d">2026/9/4</div><p>蔣黃女在兒子與森林城市協會陪同下，登記參選高雄市議員第三選區。</p></li>
       <li class="ama"><div class="d">2026/9/30</div><p>全台逾 70 個環團在糖廠成立後援會，大潭藻礁搶救聯盟潘忠政到場聲援。</p></li>
       <li class="ama"><div class="d">2026/10/10</div><p>83 歲生日當天，森林阿嬤到凱達格蘭大道許願，請賴總統調整計畫：60 米道路改道、縮小開發範圍，把約 154 公頃國有林地規劃為「國家都市森林示範區」。</p></li>
@@ -209,7 +240,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <section id="forest">
   <div class="wrap">
     <div class="label">這片森林</div>
-    <h2>我們的森林，你們的記憶</h2>
+    <h2>我們的森林，你們的記憶<span class="era old">影片 2025/12</span></h2>
     <p class="sub">百年糖廠的工業遺址，和自己長出來的次生林，在這裡共生了半個世紀。</p>
     <div class="grid3">
       <div class="card"><img src="img/rail.jpg" alt="林間的五分車鐵道" loading="lazy"><div class="body"><h3>五分車與次生林</h3><p>五分車鐵軌、廠房、宿舍、學校串成「廠、住、校一體」的文化地景，是高雄北部的都市之肺。</p></div></div>
@@ -221,7 +252,8 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <div>
         <h3>森林，是擋住河水的海綿</h3>
         <p>這片林地緊鄰典寶溪，是天然的洪泛空間。護樹團體估算它能吸收約 175 萬噸洪水，相當於 9 座寶業滯洪池。計畫若將土地填高約 1.6 米，水就得往別處去——凱米（2024）與康芮（2025）颱風時，楠梓、橋頭都曾嚴重淹水。</p>
-        <p class="figcap">數據為護樹團體與影片製作時的整理；官方則表示將以公園兼滯洪池、廣植喬木建構海綿城市。</p>
+        <p>官方的修正版在典寶溪沿岸規劃約 20 公頃公園兼滯洪池，以 10 年重現期距設計，吸納開發後增加的逕流。但逢甲大學學者在公視《我們的島》指出：現行規劃只處理基地內的逕流，<strong>沒有做到整個河川系統的調控</strong>。</p>
+        <p class="figcap">175 萬噸為護樹團體與影片製作時（2025/12）的估算。</p>
       </div>
       <div class="fig"><img src="img/sponge.jpg" alt="森林土壤像海綿吸收洪水的示意圖" loading="lazy"></div>
     </div>
@@ -231,13 +263,14 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <section id="plan" class="alt">
   <div class="wrap">
     <div class="label">開發計畫</div>
-    <h2>一道將撕裂大地的傷疤</h2>
+    <h2>一道將撕裂大地的傷疤<span class="era new">已更新至 2026/10</span></h2>
     <p class="sub">高雄新市鎮後期發展區（第三期）</p>
     <div class="grid2" style="align-items:center">
       <div class="fig"><img src="img/roadmap.jpg" alt="1-1號道路貫穿森林示意圖" loading="lazy"></div>
       <div>
         <p>計畫要開闢一條 <strong>60 米寬的「1-1 號道路」</strong>，橫向穿過糖廠森林與文化區，腰斬五分車軌道，並經過興糖國小門口；捷運紫線也將切過林地。原本的台糖林地，大多將變更為住商建地。</p>
-        <p>官方的理由，是半導體 S 廊帶帶來的住宅需求與在地交通。但影片裡我問過：依台積電廠區員工推估，真實新增的住房需求有那麼大嗎？一、二期仍有大片閒置土地，橋頭周邊也有上萬間空屋。</p>
+        <p>2026/7 通過的修正版，把部分道路改成綠園道，並把平地造林地改為約 21 公頃公園兼滯洪池；但 <strong>1-1 道路仍是串聯一至四期的主要幹道</strong>，護樹團體的改道訴求並未被採納。</p>
+        <p>官方的理由，是半導體 S 廊帶帶來的住宅需求與在地交通。但影片裡我問過：依台積電廠區員工推估，真實新增的住房需求有那麼大嗎？（官方說法約 1 萬戶，影片當時推估約 4,000–8,000 戶）一、二期仍有大片閒置土地，橋頭周邊也有上萬間空屋。</p>
       </div>
     </div>
     <div class="stats">
@@ -246,7 +279,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <div class="stat"><b>約 10 萬棵</b><span>可能被移除的樹木</span></div>
       <div class="stat"><b>約 10%</b><span>一、二期進駐率（民團引述）</span></div>
     </div>
-    <div class="note">📏 關於「百頃」：各方說法不一。媒體多稱「百公頃森林」，護樹團體主張保留的國有林地約 154 公頃，影片當時估計 100–180 公頃。國土署表示計畫保留約 21 公頃糖廠文化景觀保存區、19 公頃觀光發展特定專用區；里長聯誼會則稱計畫含 60 多公頃綠地。</div>
+    <div class="note">📏 關於面積：各方數字不一。開發總面積有 219 公頃（上下游新聞，台糖持有 124.8 公頃）與 226 公頃（公視《我們的島》，台糖與台灣糖業協會土地 163 公頃）兩種說法。森林部分，媒體多稱「百公頃森林」，護樹團體主張保留的國有林地約 154 公頃，影片當時估計 100–180 公頃。國土署表示計畫保留約 21 公頃糖廠文化景觀保存區、19 公頃觀光發展特定專用區；里長聯誼會則稱計畫含 60 多公頃綠地。</div>
   </div>
 </section>
 
@@ -262,6 +295,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
           <li>橋頭長年被糖廠用地包圍，發展受限；里長形容「提早 55 分鐘出門還是塞車」。</li>
           <li>里長聯誼會認為新市鎮是「百年一遇的翻轉機會」，開發難免移植部分樹木。</li>
           <li>國土署：方案已大幅修正，未來依樹木保護規定，在公園兼滯洪池廣植喬木。</li>
+          <li>台糖與農業部確認：糖廠林木屬於「短期人工經濟造林」，不是天然林。也有專欄認為，這和台北行道樹爭議性質不同，應聚焦保留多少綠地與生態補償，而非「亂砍樹」口號。</li>
         </ul>
       </div>
       <div class="side con">
@@ -269,6 +303,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
         <ul>
           <li>高雄人口連續近十年下滑、周邊近 400 公頃土地可規劃，為何非砍森林不可？</li>
           <li>60 米道路經過國小門口，學童通學安全堪慮；洪患風險上升。</li>
+          <li>人工林也已長成數十年的次生林，8 種保育類鳥類與螢火蟲在此棲息。</li>
           <li>「左手都市林、右手毀森林」——與總統的都市林政策矛盾；審查程序也有利益迴避疑慮。</li>
         </ul>
       </div>
@@ -311,7 +346,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <section id="roads">
   <div class="wrap">
     <div class="label">兩條路，兩種未來</div>
-    <h2>是短期的土地利益，還是永續的生態價值？</h2>
+    <h2>是短期的土地利益，還是永續的生態價值？<span class="era old">影片 2025/12＋2026 補充</span></h2>
     <p class="sub">我們的選擇，將決定這片土地的百年命運。</p>
     <div class="roads">
       <div class="road steel">
@@ -330,9 +365,9 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
         <div class="body">
           <h3>生命之路：更聰明的做法</h3>
           <ul>
-            <li><b>道路改道</b>：60 米道路繞至外圍（如 1-3 號道路、國道邊坡）；森林阿嬤則提議改至興糖國小後方並縮小範圍。</li>
+            <li><b>道路改道</b>：影片當時提出繞至外圍（如 1-3 號道路、國道邊坡）。2026 年環團具體提出「新 1-1」路線：利用既有道路、改線到興糖國小南側並直接銜接青埔站；森林阿嬤也在凱道提出同樣訴求。</li>
             <li><b>容積轉移</b>：把開發需求導向一、二期已規劃的閒置區。</li>
-            <li><b>森林文化公園</b>：仿明治神宮、溪頭，打造「國家都市森林示範區」，影片當時估算每年可創造約 34 億元觀光產值。</li>
+            <li><b>森林文化公園</b>：仿明治神宮、溪頭，打造「國家都市森林示範區」，影片當時（2025/12）估算每年可創造約 34 億元觀光產值。</li>
           </ul>
         </div>
       </div>
@@ -402,6 +437,11 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <li><a href="https://www.epochtimes.com/b5/26/9/5/n14842995.htm" target="_blank" rel="noopener">大紀元〈下屆高雄市長5人登記參選〉2026/9/5</a></li>
       <li><a href="https://www.chinatimes.com/realtimenews/20261011001555-260407" target="_blank" rel="noopener">中時〈高雄市長首場辯論敲定！柯志恩、賴瑞隆同台交鋒〉2026/10/11</a></li>
       <li><a href="https://www.fcat2020.org/post/1150915" target="_blank" rel="noopener">台灣森林城市協會〈十月橋頭糖廠森林小旅行〉</a></li>
+      <li><a href="https://www.cna.com.tw/news/aipl/202607210328.aspx" target="_blank" rel="noopener">中央社〈內政部都委會通過高雄新市鎮三期案 兼顧發展與生態〉2026/7/21</a></li>
+      <li><a href="https://ourisland.pts.org.tw/content/12050" target="_blank" rel="noopener">公視我們的島〈高雄新市鎮第三期開發案修正後通過都委會審議〉2026/7/21</a></li>
+      <li><a href="https://ourisland.pts.org.tw/content/12070" target="_blank" rel="noopener">公視我們的島〈衝突中找解方—高雄新市鎮第三期開發爭議紀實〉</a></li>
+      <li><a href="https://news.ltn.com.tw/news/life/breakingnews/5301883" target="_blank" rel="noopener">自由時報〈環團提「新1-1」取代「舊1-1」道路〉2026/1/7</a></li>
+      <li><a href="https://wp.taronews.tw/2026/09/21/1208710/" target="_blank" rel="noopener">芋傳媒《農藝女孩專欄》〈橋頭糖廠砍樹爭議，不能和台北行道樹混為一談〉2026/9/21</a></li>
       <li><a href="https://ourisland.pts.org.tw/content/11769" target="_blank" rel="noopener">公視我們的島〈誰來決定新市鎮：橋頭開發與糖業鐵道歷史〉</a></li>
     </ol>
     <p>插圖取自原始影片簡報（NotebookLM 生成）與 AI 水彩插畫，皆為示意。本頁為個人整理的公民倡議頁面，非候選人官方網站。資料更新至 2026/10/11。</p>
