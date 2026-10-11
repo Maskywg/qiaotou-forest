@@ -128,6 +128,8 @@ h3{font-family:"Noto Serif TC",serif;font-size:21px;line-height:1.45;margin:0 0 
 .legend i.box{height:14px;border:2px solid;border-radius:3px}
 .maptabs{display:flex;gap:8px;margin:0 0 12px}
 .maptabs button{font-family:inherit;font-size:14px;padding:6px 16px;border-radius:99px;border:1.5px solid var(--green);background:transparent;color:var(--green);cursor:pointer}
+.maptabs{flex-wrap:wrap;align-items:center}
+.gmaplink{font-size:14px;margin-left:auto}
 .maptabs button.on{background:var(--green);color:#fff}
 .leaflet-tooltip.qt{background:rgba(255,253,247,.95);border:1px solid var(--line);color:var(--ink);font-family:"Noto Sans TC",sans-serif;font-size:13px;font-weight:700;box-shadow:none}
 @media (max-width:760px){#qtmap{height:440px}}
@@ -419,10 +421,10 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <p class="figcap">不按比例。淡黃色虛線框是第三期計畫範圍，涵蓋糖廠、造林地、興糖國小周邊與捷運兩站。紅色數字是舊 1-1 的三個衝突點：<b>①</b> 從糖廠與興糖國小之間穿過，切斷五分車、經過國小門口；<b>②</b> 斜穿造林地核心；<b>③</b> 跨越典寶溪的洪泛空間。</p>
 
     <h3 style="margin-top:36px">實際地圖</h3>
-    <div class="maptabs"><button type="button" class="on" data-base="sat">衛星</button><button type="button" data-base="road">街道</button><button type="button" id="zoneBtn" aria-pressed="false">疊上官方分區圖</button></div>
+    <div class="maptabs"><button type="button" class="on" data-base="sat">衛星</button><button type="button" data-base="road">街道</button><button type="button" id="zoneBtn" aria-pressed="false">疊上官方分區圖</button><a class="gmaplink" href="https://www.google.com/maps/search/?api=1&query=22.7525,120.3195" target="_blank" rel="noopener">在 Google 地圖開啟 ↗</a></div>
     <div id="qtmap" role="region" aria-label="橋頭糖廠森林實際地圖"></div>
     <div class="legend">
-      <span><i class="box" style="border-color:#8a8574;border-style:dashed;background:rgba(255,243,196,.6)"></i>第三期計畫範圍（地圖上為白色虛線）</span>
+      <span><i class="box" style="border-color:#8a8574;border-style:dashed;background:rgba(255,243,196,.6)"></i>第三期計畫範圍（衛星圖為白色、街道圖為咖啡色虛線）</span>
       <span><i class="box" style="border-color:#3d8a35;background:rgba(80,160,70,.35)"></i>造林地（衛星判讀約略範圍）</span>
       <span><i class="box" style="border-color:#a9502e;border-style:dashed;background:rgba(244,226,214,.5)"></i>糖廠保存區＋觀光專用區</span>
       <span><i style="border-color:#4f97c4"></i>典寶溪</span>
@@ -734,7 +736,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <li><a href="https://estate.ltn.com.tw/article/26541" target="_blank" rel="noopener">自由時報地產天下〈橋科正式啟用 將創1.1萬就業機會〉</a></li>
       <li><a href="https://www.twreporter.org/a/afforestation-in-the-plain-area-1" target="_blank" rel="noopener">報導者〈那些長不大的樹──平地造林20年〉</a></li>
       <li><a href="https://www.chinatimes.com/realtimenews/20251108002351-260405" target="_blank" rel="noopener">中時〈高雄擬闢60米道路橫貫橋糖園區 五分車恐成絕響〉2025/11/8</a></li>
-      <li>地圖：線形資料 © OpenStreetMap contributors；衛星影像 © Esri；街道底圖 © CARTO</li>
+      <li>地圖：線形資料 © OpenStreetMap contributors；衛星影像 © Esri；街道底圖 © 內政部國土測繪中心（臺灣通用電子地圖）</li>
       <li><a href="https://udn.com/news/story/7327/9528174" target="_blank" rel="noopener">聯合報〈橋頭糖廠百頃森林變建地案 護樹團體爆審查委員兼台糖獨董〉2026/5/27</a></li>
       <li><a href="https://money.udn.com/money/story/7307/9529223" target="_blank" rel="noopener">經濟日報〈高雄新市鎮三期審議遭質疑 國土署：主持人請假迴避〉2026/5/27</a></li>
       <li><a href="https://www.ctwant.com/article/482950/" target="_blank" rel="noopener">CTWANT〈高雄新市鎮三期審議遭質疑 國土署：委員已迴避、程序未定案〉2026/5/28</a></li>
@@ -816,7 +818,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   var G=window.QT_GEO;
   var map=L.map('qtmap',{scrollWheelZoom:false,zoomSnap:0.25});
     var sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'衛星影像 &copy; Esri'});
-  var road=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors &copy; CARTO'});
+  var road=L.tileLayer('https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMapsCompatible/{z}/{y}/{x}',{maxZoom:19,maxNativeZoom:19,attribution:'街道圖 &copy; 內政部國土測繪中心 臺灣通用電子地圖'});
   sat.addTo(map);
   map.attributionControl.addAttribution('線形資料 &copy; OpenStreetMap contributors');
   function tip(layer,t,perm){layer.bindTooltip(t,{className:'qt',permanent:!!perm,direction:'center'});return layer;}
@@ -840,7 +842,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   zb.addEventListener('click',function(){var on=map.hasLayer(zone);if(on){map.removeLayer(zone);}else{zone.addTo(map);zone.bringToBack();}zb.classList.toggle('on',!on);zb.setAttribute('aria-pressed',!on);});
   document.querySelectorAll('.maptabs button[data-base]').forEach(function(b){b.addEventListener('click',function(){
     document.querySelectorAll('.maptabs button[data-base]').forEach(function(x){x.classList.remove('on');});b.classList.add('on');
-    if(b.dataset.base==='sat'){map.removeLayer(road);sat.addTo(map);}else{map.removeLayer(sat);road.addTo(map);}
+    if(b.dataset.base==='sat'){map.removeLayer(road);sat.addTo(map);p3.setStyle({color:'#ffffff'});}else{map.removeLayer(sat);road.addTo(map);p3.setStyle({color:'#8a5d12'});}
   });});
 })();
 </script>
