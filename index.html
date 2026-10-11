@@ -324,7 +324,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <div class="wrap">
     <div class="label">地圖</div>
     <h2>一條路，要從哪裡穿過去？</h2>
-    <p class="sub">先看示意圖理解結構，再看實際地圖對照位置。</p>
+    <p class="sub">先看示意圖理解結構，再看實際地圖對照位置。第三期計畫範圍約 219 公頃，位在新市鎮一期（西南）與二期（東北）之間：典寶溪以西、台 1 線以東，涵蓋糖廠、造林地與捷運青埔、橋頭糖廠兩站周邊。</p>
 
     <h3>示意圖</h3>
     <div class="schem"><svg viewBox="0 0 820 540" role="img" aria-labelledby="sch-t sch-d">
@@ -344,6 +344,12 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <line x1="150" y1="0" x2="250" y2="540" stroke="#9a9588" stroke-width="3"/>
 <line x1="162" y1="0" x2="262" y2="540" stroke="#c0392b" stroke-width="2.5" opacity=".7"/>
 <text x="120" y="30" font-size="12" fill="#6c6858" transform="rotate(79 120 30)">縱貫線・捷運紅線</text>
+<!-- 第三期範圍 -->
+<path d="M200 130 L 470 108 L 655 92 L 668 250 L 625 335 L 610 410 L 480 500 L 330 515 L 262 525 L 238 400 L 205 290 Z" fill="#fff3c4" fill-opacity=".55" stroke="#b07a1e" stroke-width="2.5" stroke-dasharray="10 6"/>
+<line x1="664" y1="230" x2="722" y2="230" stroke="#b07a1e" stroke-width="1.5"/>
+<text x="726" y="226" font-size="13" font-weight="700" fill="#8a5d12">第三期</text>
+<text x="726" y="244" font-size="13" font-weight="700" fill="#8a5d12">計畫範圍</text>
+<text x="726" y="262" font-size="12" fill="#8a5d12">約 219 公頃</text>
 <!-- 森林 -->
 <path d="M300 150 C 330 120, 470 118, 560 135 C 600 150, 610 230, 600 300 C 590 350, 560 395, 520 400 C 470 405, 430 380, 400 385 C 360 392, 320 380, 305 340 C 290 290, 285 190, 300 150 Z" fill="#cfe0c2" stroke="#7da06e" stroke-width="2"/>
 <path d="M300 150 C 330 120, 470 118, 560 135 C 600 150, 610 230, 600 300 C 590 350, 560 395, 520 400 C 470 405, 430 380, 400 385 C 360 392, 320 380, 305 340 C 290 290, 285 190, 300 150 Z" fill="url(#trees)"/>
@@ -380,20 +386,21 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <circle cx="604" cy="112" r="13" fill="#a12d21"/><text x="604" y="116" text-anchor="middle">3</text>
 </g>
 </svg></div>
-    <p class="figcap">不按比例。紅色數字是舊 1-1 的三個衝突點：<b>①</b> 從糖廠與興糖國小之間穿過，切斷五分車、經過國小門口；<b>②</b> 斜穿造林地核心；<b>③</b> 跨越典寶溪的洪泛空間。</p>
+    <p class="figcap">不按比例。淡黃色虛線框是第三期計畫範圍，涵蓋糖廠、造林地、興糖國小周邊與捷運兩站。紅色數字是舊 1-1 的三個衝突點：<b>①</b> 從糖廠與興糖國小之間穿過，切斷五分車、經過國小門口；<b>②</b> 斜穿造林地核心；<b>③</b> 跨越典寶溪的洪泛空間。</p>
 
     <h3 style="margin-top:36px">實際地圖</h3>
     <div class="maptabs"><button type="button" class="on" data-base="sat">衛星</button><button type="button" data-base="road">街道</button></div>
     <div id="qtmap" role="region" aria-label="橋頭糖廠森林實際地圖"></div>
     <div class="legend">
+      <span><i class="box" style="border-color:#8a8574;border-style:dashed;background:rgba(255,243,196,.6)"></i>第三期計畫範圍（地圖上為白色虛線）</span>
       <span><i class="box" style="border-color:#3d8a35;background:rgba(80,160,70,.35)"></i>造林地（衛星判讀約略範圍）</span>
-      <span><i class="box" style="border-color:#a9502e;border-style:dashed;background:rgba(244,226,214,.5)"></i>糖廠園區（約略範圍）</span>
+      <span><i class="box" style="border-color:#a9502e;border-style:dashed;background:rgba(244,226,214,.5)"></i>糖廠保存區＋觀光專用區</span>
       <span><i style="border-color:#4f97c4"></i>典寶溪</span>
       <span><i style="border-color:#7a3d24;border-top-style:dotted"></i>五分車鐵道</span>
-      <span><i style="border-color:#e0453a"></i>舊 1-1（示意）</span>
+      <span><i style="border-color:#e0453a"></i>1-1 道路（依計畫圖）</span>
       <span><i style="border-color:#d9a03a;border-top-style:dashed"></i>新 1-1（示意）</span>
     </div>
-    <div class="note" style="background:#fbf0d9;color:#5a4214">📍 河川、五分車、鐵道與捷運為 OpenStreetMap 實際線形；造林地範圍依衛星影像目視判讀；<b>兩條 1-1 道路路線為依新聞文字描述繪製的示意，並非官方路線圖</b>。正式路線請以國土署<a href="https://www.moi.gov.tw/News_Content.aspx?n=4&sms=9009&s=328107" target="_blank" rel="noopener">公開展覽計畫書圖</a>為準。</div>
+    <div class="note" style="background:#fbf0d9;color:#5a4214">📍 河川、五分車、鐵道與捷運為 OpenStreetMap 實際線形；造林地範圍依衛星影像目視判讀。<b>第三期範圍、1-1 道路與糖廠保存區</b>，依國土署細部計畫土地使用分區圖（<a href="https://estate.ltn.com.tw/article/24246" target="_blank" rel="noopener">自由時報轉載</a>）與實際座標對位描繪，換算面積約 230 公頃（官方 219.35 公頃），位置誤差約數十公尺；<b>新 1-1 為依新聞描述繪製的示意</b>。正式路線請以國土署<a href="https://www.moi.gov.tw/News_Content.aspx?n=4&sms=9009&s=328107" target="_blank" rel="noopener">公開展覽計畫書圖</a>為準。</div>
   </div>
 </section>
 
@@ -715,21 +722,24 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 (function(){
   if(!window.L||!window.QT_GEO) return;
   var G=window.QT_GEO;
-  var map=L.map('qtmap',{scrollWheelZoom:false});
-  map.fitBounds([[22.7435,120.3100],[22.7612,120.3275]],{padding:[10,10]});
-  var sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'衛星影像 &copy; Esri'});
+  var map=L.map('qtmap',{scrollWheelZoom:false,zoomSnap:0.25});
+    var sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'衛星影像 &copy; Esri'});
   var road=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors &copy; CARTO'});
   sat.addTo(map);
   map.attributionControl.addAttribution('線形資料 &copy; OpenStreetMap contributors');
   function tip(layer,t,perm){layer.bindTooltip(t,{className:'qt',permanent:!!perm,direction:'center'});return layer;}
+  var p3=L.polygon(G.phase3,{color:'#ffffff',weight:4,dashArray:'12 7',fillColor:'#fff3c4',fillOpacity:.18}).addTo(map);
+  tip(p3,'新市鎮第三期計畫範圍（約 219 公頃）');
+  function fit(){map.invalidateSize();map.fitBounds(p3.getBounds(),{paddingTopLeft:[10,36],paddingBottomRight:[10,10]});}
+  fit(); window.addEventListener('load',fit);
   G.forest.forEach(function(p,i){tip(L.polygon(p,{color:'#3d8a35',weight:2,fillColor:'#50a046',fillOpacity:.35}).addTo(map),i===0?'台糖造林地（核心區）':'造林地');});
-  tip(L.polygon(G.heritage,{color:'#a9502e',weight:2,dashArray:'6 4',fillColor:'#f4e2d6',fillOpacity:.45}).addTo(map),'橋頭糖廠園區');
+  tip(L.polygon(G.heritage,{color:'#a9502e',weight:2,dashArray:'6 4',fillColor:'#f4e2d6',fillOpacity:.45}).addTo(map),'糖廠文化景觀保存區＋觀光專用區');
   G.river.forEach(function(l){L.polyline(l,{color:'#4f97c4',weight:5,opacity:.9}).addTo(map);});
   G.tra.forEach(function(l){L.polyline(l,{color:'#8a8574',weight:3,opacity:.8}).addTo(map);});
   G.mrt.forEach(function(l){L.polyline(l,{color:'#c0392b',weight:2,opacity:.6}).addTo(map);});
   G.sugar.forEach(function(l){tip(L.polyline(l,{color:'#7a3d24',weight:4,dashArray:'2 6',lineCap:'round'}).addTo(map),'五分車鐵道');});
-  tip(L.polyline(G.old11,{color:'#e0453a',weight:14,opacity:.35}).addTo(map),'舊 1-1（示意）・60 米');
-  L.polyline(G.old11,{color:'#e0453a',weight:3}).addTo(map);
+  tip(L.polyline(G.road11,{color:'#e0453a',weight:14,opacity:.4}).addTo(map),'1-1 道路（60 米，修正版改為園道）');
+  L.polyline(G.road11,{color:'#e0453a',weight:3}).addTo(map);
   tip(L.polyline(G.new11,{color:'#d9a03a',weight:5,dashArray:'12 8'}).addTo(map),'新 1-1（示意）');
   var pts=[['橋頭糖廠',22.7536,120.3146],['興糖國小',22.7503,120.3176],['捷運青埔站',22.7444,120.3177],['花卉農園中心站',22.7430,120.3243],['橋頭火車站',22.7609,120.3107],['典寶溪',22.7585,120.3205],['新市鎮二期・橋科方向',22.7640,120.3270],['新市鎮一期方向',22.7445,120.3075]];
   pts.forEach(function(p){L.circleMarker([p[1],p[2]],{radius:5,color:'#fff',weight:2,fillColor:'#23361f',fillOpacity:1}).addTo(map).bindTooltip(p[0],{className:'qt',permanent:true,direction:'right',offset:[6,0]});});
