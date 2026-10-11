@@ -153,6 +153,13 @@ main img.zoomable:hover{filter:brightness(1.04)}
 .closing .banner{max-width:980px;margin:0 auto 36px;padding:0 20px}
 .closing .banner img{width:100%;border-radius:18px}
 @media (max-width:760px){.act-wrap,.act-wrap .grid2{grid-template-columns:1fr}}
+.fate{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;margin-top:40px}
+.fatebar{display:flex;height:34px;border-radius:10px;overflow:hidden;margin:14px 0 8px;font-size:13px;font-weight:700;color:#fff}
+.fatebar span{display:flex;align-items:center;justify-content:center}
+.fatekey{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13.5px;color:var(--muted);margin-bottom:14px}
+.fatekey i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.bigsay{font-family:"Noto Serif TC",serif;font-size:clamp(20px,2.6vw,25px);line-height:1.55;color:#a12d21;margin:0 0 12px}
+@media (max-width:760px){.fate{grid-template-columns:1fr}}
 .figcap{font-size:13px;color:var(--muted);margin-top:8px}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 0}
@@ -322,7 +329,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <div><figure class="aifig"><img src="img/ai-road60.jpg" alt="60 米寬 1-1 道路切過糖廠示意圖" loading="lazy" data-cap="60 米寬 1-1 道路切過糖廠示意圖｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>1-1 道路的三個衝突：歷史的斷裂、生態的孤島、學童的危機。實際位置見下方地圖。<span class="aitag">AI 示意</span></figcaption></figure></div>
       <div>
         <p>第三期約 219 公頃，大半是台糖土地。計畫把林地與蔗田變更為住宅區、商業區，再以區段徵收整體開發；主幹是一條 <strong>60 米寬的 1-1 道路</strong>。</p>
-        <p>2026/7 通過的修正版把部分道路改為綠園道、增設約 21 公頃公園兼滯洪池，但 <strong>1-1 仍是串聯一至四期的主要幹道</strong>，改道訴求未被採納。</p>
+        <p>2026/7 通過的修正版把部分道路改為綠園道、增設約 21 公頃公園兼滯洪池，但 <strong>1-1 仍是串聯一至四期的主要幹道</strong>，改道訴求未被採納。<a href="#fate">森林最後會變成什麼？看疊圖 →</a></p>
         <p>官方的理由是半導體 S 廊帶帶來的住宅與交通需求；需求估算是否合理，是爭議核心之一（見<a href="#deep">深讀</a>）。</p>
       </div>
     </div>
@@ -406,7 +413,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <p class="figcap">不按比例。淡黃色虛線框是第三期計畫範圍，涵蓋糖廠、造林地、興糖國小周邊與捷運兩站。紅色數字是舊 1-1 的三個衝突點：<b>①</b> 從糖廠與興糖國小之間穿過，切斷五分車、經過國小門口；<b>②</b> 斜穿造林地核心；<b>③</b> 跨越典寶溪的洪泛空間。</p>
 
     <h3 style="margin-top:36px">實際地圖</h3>
-    <div class="maptabs"><button type="button" class="on" data-base="sat">衛星</button><button type="button" data-base="road">街道</button></div>
+    <div class="maptabs"><button type="button" class="on" data-base="sat">衛星</button><button type="button" data-base="road">街道</button><button type="button" id="zoneBtn" aria-pressed="false">疊上官方分區圖</button></div>
     <div id="qtmap" role="region" aria-label="橋頭糖廠森林實際地圖"></div>
     <div class="legend">
       <span><i class="box" style="border-color:#8a8574;border-style:dashed;background:rgba(255,243,196,.6)"></i>第三期計畫範圍（地圖上為白色虛線）</span>
@@ -418,6 +425,24 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <span><i style="border-color:#d9a03a;border-top-style:dashed"></i>新 1-1（示意）</span>
     </div>
     <div class="note" style="background:#fbf0d9;color:#5a4214">📍 河川、五分車、鐵道與捷運為 OpenStreetMap 實際線形；造林地範圍依衛星影像目視判讀。<b>第三期範圍、1-1 道路與糖廠保存區</b>，依國土署細部計畫土地使用分區圖（<a href="https://estate.ltn.com.tw/article/24246" target="_blank" rel="noopener">自由時報轉載</a>）與實際座標對位描繪，換算面積約 230 公頃（官方 219.35 公頃），位置誤差約數十公尺；<b>新 1-1 為依新聞描述繪製的示意</b>。正式路線請以國土署<a href="https://www.moi.gov.tw/News_Content.aspx?n=4&sms=9009&s=328107" target="_blank" rel="noopener">公開展覽計畫書圖</a>為準。</div>
+    <div class="fate" id="fate">
+      <div>
+        <figure class="aifig"><img src="img/zoning-forest.jpg" alt="現有造林地疊在官方土地使用分區圖上" loading="lazy" data-cap="紅框：現有造林地（依衛星影像描繪）；底圖：國土署第三期細部計畫土地使用分區圖（自由時報轉載）。商＝商業區、住＝住宅區、公(滯)＝公園兼滯洪池、存＝保存區。"><figcaption>紅框是現在的森林，底下是官方規劃要把它變成什麼。點圖放大看。</figcaption></figure>
+      </div>
+      <div>
+        <div class="label">這片森林會變成什麼？</div>
+        <p class="bigsay">糖廠保存區以外，<br>現在的森林大部分會消失。</p>
+        <p>我們把衛星照片上看到的森林範圍（紅框，約 76 公頃），疊到政府的規劃圖上。結果很清楚：</p>
+        <div class="fatebar" role="img" aria-label="森林範圍內約八成規劃為住宅、商業、道路，約兩成為公園兼滯洪池">
+          <span style="width:78%;background:#a9502e">住宅・商業・道路 約 8 成</span>
+          <span style="width:22%;background:#3d8a35">公園 約 2 成</span>
+        </div>
+        <div class="fatekey"><span><i style="background:#a9502e"></i>會整地蓋房子、開馬路</span><span><i style="background:#3d8a35"></i>沿著溪邊與中間的帶狀公園</span></div>
+        <p><b>那兩成公園，樹會留下來嗎？</b>大多不會。政府說要把造林地「改造成」公園兼滯洪池——也就是先挖成蓄水的池子，再重新種樹。官方寫明的數字是：原地保留 <b>195 棵</b>、移植 <b>357 棵</b>、新種 <b>8,253 棵</b>。林子裡的樹以萬為單位，真正原地留下的只有約兩百棵。</p>
+        <p><b>真正保得住的</b>，是西邊糖廠園區（文化景觀保存區）裡的老樹群。</p>
+        <p class="figcap">說明：森林邊界是我們看衛星照片描的；規劃圖用的是媒體轉載的版本，和實際座標對位時約有數十公尺誤差，所以「8 成／2 成」是大約的比例，不是官方統計。台糖說徵收範圍內的人造林約 51 公頃，和我們描的 76 公頃不同，可能是計算範圍不一樣（我們把溪邊林地也算進來了）。</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -785,8 +810,11 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   tip(L.polyline(G.new11,{color:'#d9a03a',weight:5,dashArray:'12 8'}).addTo(map),'新 1-1（示意）');
   var pts=[['橋頭糖廠',22.7536,120.3146],['興糖國小',22.7503,120.3176],['捷運青埔站',22.7444,120.3177],['花卉農園中心站',22.7430,120.3243],['橋頭火車站',22.7609,120.3107],['典寶溪',22.7585,120.3205],['新市鎮二期・橋科方向',22.7640,120.3270],['新市鎮一期方向',22.7445,120.3075]];
   pts.forEach(function(p){L.circleMarker([p[1],p[2]],{radius:5,color:'#fff',weight:2,fillColor:'#23361f',fillOpacity:1}).addTo(map).bindTooltip(p[0],{className:'qt',permanent:true,direction:'right',offset:[6,0]});});
-  document.querySelectorAll('.maptabs button').forEach(function(b){b.addEventListener('click',function(){
-    document.querySelectorAll('.maptabs button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');
+  var zone=L.imageOverlay('img/zoning-overlay.jpg',[[22.73320,120.30835],[22.76619,120.33351]],{opacity:.7});
+  var zb=document.getElementById('zoneBtn');
+  zb.addEventListener('click',function(){var on=map.hasLayer(zone);if(on){map.removeLayer(zone);}else{zone.addTo(map);zone.bringToBack();}zb.classList.toggle('on',!on);zb.setAttribute('aria-pressed',!on);});
+  document.querySelectorAll('.maptabs button[data-base]').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.maptabs button[data-base]').forEach(function(x){x.classList.remove('on');});b.classList.add('on');
     if(b.dataset.base==='sat'){map.removeLayer(road);sat.addTo(map);}else{map.removeLayer(sat);road.addTo(map);}
   });});
 })();
