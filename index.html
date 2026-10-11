@@ -337,7 +337,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <div><figure class="aifig"><img src="img/ai-road60.jpg" alt="60 米寬 1-1 道路切過糖廠示意圖" loading="lazy" data-cap="60 米寬 1-1 道路切過糖廠示意圖｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>1-1 道路的三個衝突：歷史的斷裂、生態的孤島、學童的危機。實際位置見下方地圖。<span class="aitag">AI 示意</span></figcaption></figure></div>
       <div>
         <p>第三期約 219 公頃，大半是台糖土地。計畫把林地與蔗田變更為住宅區、商業區，再以區段徵收整體開發；主幹是一條 <strong>60 米寬的 1-1 道路</strong>。</p>
-        <p>2026/7 通過的修正版把部分道路改為綠園道、增設約 21 公頃公園兼滯洪池，但 <strong>1-1 仍是串聯一至四期的主要幹道</strong>，改道訴求未被採納。<a href="#fate">森林最後會變成什麼？看疊圖 →</a></p>
+        <p>2026/7 通過的修正版把部分道路改為綠園道、增設約 21 公頃公園兼滯洪池，但 <strong>1-1 仍是串聯一至四期的主要幹道</strong>，改道訴求未被採納。<a href="#overlap">第三期蓋在哪片森林上？看重疊圖 →</a></p>
         <p>官方的理由是半導體 S 廊帶帶來的住宅與交通需求；需求估算是否合理，是爭議核心之一（見<a href="#deep">深讀</a>）。</p>
       </div>
     </div>
@@ -424,8 +424,8 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <div class="maptabs"><button type="button" class="on" data-base="sat">衛星</button><button type="button" data-base="road">街道</button><button type="button" id="zoneBtn" aria-pressed="false">疊上官方分區圖</button><a class="gmaplink" href="https://www.google.com/maps/search/?api=1&query=22.7525,120.3195" target="_blank" rel="noopener">在 Google 地圖開啟 ↗</a></div>
     <div id="qtmap" role="region" aria-label="橋頭糖廠森林實際地圖"></div>
     <div class="legend">
-      <span><i class="box" style="border-color:#8a8574;border-style:dashed;background:rgba(255,243,196,.6)"></i>第三期計畫範圍（衛星圖為白色、街道圖為咖啡色虛線）</span>
-      <span><i class="box" style="border-color:#3d8a35;background:rgba(80,160,70,.35)"></i>造林地（衛星判讀約略範圍）</span>
+      <span><i class="box" style="border-color:#f07a1a;border-width:3px;background:rgba(245,166,35,.15)"></i>第三期計畫範圍（橘框）</span>
+      <span><i class="box" style="border-color:#1f6b1a;background:rgba(46,158,42,.55)"></i>造林地（衛星判讀約略範圍）</span>
       <span><i class="box" style="border-color:#a9502e;border-style:dashed;background:rgba(244,226,214,.5)"></i>糖廠保存區＋觀光專用區</span>
       <span><i style="border-color:#4f97c4"></i>典寶溪</span>
       <span><i style="border-color:#7a3d24;border-top-style:dotted"></i>五分車鐵道</span>
@@ -433,6 +433,23 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <span><i style="border-color:#d9a03a;border-top-style:dashed"></i>新 1-1（示意）</span>
     </div>
     <div class="note" style="background:#fbf0d9;color:#5a4214">📍 河川、五分車、鐵道與捷運為 OpenStreetMap 實際線形；造林地範圍依衛星影像目視判讀。<b>第三期範圍、1-1 道路與糖廠保存區</b>，依國土署細部計畫土地使用分區圖（<a href="https://estate.ltn.com.tw/article/24246" target="_blank" rel="noopener">自由時報轉載</a>）與實際座標對位描繪，換算面積約 230 公頃（官方 219.35 公頃），位置誤差約數十公尺；<b>新 1-1 為依新聞描述繪製的示意</b>。正式路線請以國土署<a href="https://www.moi.gov.tw/News_Content.aspx?n=4&sms=9009&s=328107" target="_blank" rel="noopener">公開展覽計畫書圖</a>為準。</div>
+    <div class="fate" id="overlap">
+      <div>
+        <div class="label">第三期和森林重疊嗎？</div>
+        <p class="bigsay">重疊。糖廠旁的森林，<br>約 94% 落在第三期範圍裡。</p>
+        <p>把衛星照片上的森林（約 77 公頃）和第三期範圍（約 219 公頃）放在一起量：</p>
+        <ul style="padding-left:20px;margin:0 0 12px">
+          <li><b style="color:#a12d21">紅色：約 72 公頃</b>，森林在第三期範圍內——幾乎是整片核心林地。</li>
+          <li><b style="color:#3d6a3a">綠色</b>：不在範圍內的，主要是典寶溪北岸火車站旁的小片林地。</li>
+          <li><b style="color:#b06a10">橘色</b>：第三期其餘的土地，包括糖廠園區、農地、捷運站周邊。</li>
+        </ul>
+        <p><b>官方數字也對得上</b>：國土署計畫書記載，計畫區現況「闊葉林」約佔 29.79%，換算約 65 公頃；我們量到約 75 公頃，數量級一致（差距多來自林緣與溪邊綠地的認定）。</p>
+        <p class="figcap">森林範圍依衛星影像描繪；第三期範圍依國土署細部計畫圖對位，誤差約數十公尺。</p>
+      </div>
+      <div>
+        <figure class="aifig"><img src="img/overlap.jpg" alt="第三期計畫範圍與森林重疊圖" loading="lazy" data-cap="紅＝森林與第三期重疊（約 72 公頃）；綠＝不在第三期內的森林；橘＝第三期其他土地。底圖 © Esri 衛星影像。"><figcaption>點圖放大看。</figcaption></figure>
+      </div>
+    </div>
     <div class="fate" id="fate">
       <div>
         <figure class="aifig"><img src="img/zoning-forest.jpg" alt="現有造林地疊在官方土地使用分區圖上" loading="lazy" data-cap="紅框：現有造林地（依衛星影像描繪）；底圖：國土署第三期細部計畫土地使用分區圖（自由時報轉載）。商＝商業區、住＝住宅區、公(滯)＝公園兼滯洪池、存＝保存區。"><figcaption>紅框是現在的森林，底下是官方規劃要把它變成什麼。點圖放大看。</figcaption></figure>
@@ -822,11 +839,11 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   sat.addTo(map);
   map.attributionControl.addAttribution('線形資料 &copy; OpenStreetMap contributors');
   function tip(layer,t,perm){layer.bindTooltip(t,{className:'qt',permanent:!!perm,direction:'center'});return layer;}
-  var p3=L.polygon(G.phase3,{color:'#ffffff',weight:4,dashArray:'12 7',fillColor:'#fff3c4',fillOpacity:.18}).addTo(map);
+  var p3=L.polygon(G.phase3,{color:'#f07a1a',weight:5,fillColor:'#f5a623',fillOpacity:.12}).addTo(map);
   tip(p3,'新市鎮第三期計畫範圍（約 219 公頃）');
   function fit(){map.invalidateSize();map.fitBounds(p3.getBounds(),{paddingTopLeft:[10,36],paddingBottomRight:[10,10]});}
   fit(); window.addEventListener('load',fit);
-  G.forest.forEach(function(p,i){tip(L.polygon(p,{color:'#3d8a35',weight:2,fillColor:'#50a046',fillOpacity:.35}).addTo(map),i===0?'台糖造林地（核心區）':'造林地');});
+  G.forest.forEach(function(p,i){tip(L.polygon(p,{color:'#1f6b1a',weight:2,fillColor:'#2e9e2a',fillOpacity:.55}).addTo(map),i===0?'台糖造林地（核心區）':'造林地');});
   tip(L.polygon(G.heritage,{color:'#a9502e',weight:2,dashArray:'6 4',fillColor:'#f4e2d6',fillOpacity:.45}).addTo(map),'糖廠文化景觀保存區＋觀光專用區');
   G.river.forEach(function(l){L.polyline(l,{color:'#4f97c4',weight:5,opacity:.9}).addTo(map);});
   G.tra.forEach(function(l){L.polyline(l,{color:'#8a8574',weight:3,opacity:.8}).addTo(map);});
@@ -842,7 +859,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   zb.addEventListener('click',function(){var on=map.hasLayer(zone);if(on){map.removeLayer(zone);}else{zone.addTo(map);zone.bringToBack();}zb.classList.toggle('on',!on);zb.setAttribute('aria-pressed',!on);});
   document.querySelectorAll('.maptabs button[data-base]').forEach(function(b){b.addEventListener('click',function(){
     document.querySelectorAll('.maptabs button[data-base]').forEach(function(x){x.classList.remove('on');});b.classList.add('on');
-    if(b.dataset.base==='sat'){map.removeLayer(road);sat.addTo(map);p3.setStyle({color:'#ffffff'});}else{map.removeLayer(sat);road.addTo(map);p3.setStyle({color:'#8a5d12'});}
+    if(b.dataset.base==='sat'){map.removeLayer(road);sat.addTo(map);}else{map.removeLayer(sat);road.addTo(map);}
   });});
 })();
 </script>
