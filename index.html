@@ -137,6 +137,22 @@ h3{font-family:"Noto Serif TC",serif;font-size:21px;line-height:1.45;margin:0 0 
 .bgm-btn.on .eq i:nth-child(2){animation-delay:.2s}.bgm-btn.on .eq i:nth-child(3){animation-delay:.4s}
 @keyframes eq{0%,100%{height:4px}50%{height:14px}}
 @media (prefers-reduced-motion:reduce){.bgm-btn.on .eq i{animation:none;height:10px}}
+figure.aifig{margin:0}
+figure.aifig img{width:100%;border-radius:16px;border:1px solid var(--line)}
+figure.aifig figcaption{font-size:13px;color:var(--muted);margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.aitag{font-size:11px;font-weight:700;letter-spacing:.06em;background:#ece8dc;color:#6c6858;border-radius:99px;padding:1px 8px}
+main img.zoomable{cursor:zoom-in;transition:filter .2s}
+main img.zoomable:hover{filter:brightness(1.04)}
+.lb{position:fixed;inset:0;z-index:2000;background:rgba(20,26,18,.92);display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 16px 20px;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-width:min(1600px,100%);max-height:calc(100vh - 120px);object-fit:contain;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.lb p{color:#e9e6da;font-size:14px;margin:12px 0 0;text-align:center;max-width:900px}
+.lb button{position:absolute;top:12px;right:14px;width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}
+.act-wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:start}
+.act-wrap .grid2{grid-template-columns:1fr 1fr}
+.closing .banner{max-width:980px;margin:0 auto 36px;padding:0 20px}
+.closing .banner img{width:100%;border-radius:18px}
+@media (max-width:760px){.act-wrap,.act-wrap .grid2{grid-template-columns:1fr}}
 .figcap{font-size:13px;color:var(--muted);margin-top:8px}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 0}
@@ -218,12 +234,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <div class="label" style="color:var(--gold)">最新進度・2026/10/11</div>
       <h2 style="font-size:clamp(22px,3vw,28px)">都委會已「原則同意」，但還沒有最後定案</h2>
       <p style="margin:6px 0 0">2026/7/21 內政部都委會第 1104 次會議，把第三期計畫<strong>修正後原則同意</strong>。依程序，修正版還要在地方<strong>補辦公開展覽與說明會</strong>、接受新的陳情，必要時再開專案小組，最後才核定。另外，環境部表示要依法辦理環評變更，水利署的出流管制計畫也仍在審查。也就是說——現在說話，還來得及。</p>
-      <ol class="steps">
-        <li class="done"><b>2026/5–6</b>專案小組現勘、公益性及必要性審查</li>
-        <li class="done"><b>2026/7/21</b>都委會大會修正後原則同意</li>
-        <li class="now"><b>現在</b>補辦公展與說明會、環評變更、出流管制審查</li>
-        <li><b>最快 2027 年底</b>核定後取得土地、展開區段徵收</li>
-      </ol>
+      <div style="margin-top:18px"><figure class="aifig"><img src="img/ai-timeline.jpg" alt="第三期審議進度時程圖" loading="lazy" data-cap="第三期審議進度時程圖｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>審議進度：7/21 原則同意 → 官方修正 → 最後審核階段 → 最快 2027 年底區段徵收。<span class="aitag">AI 示意</span></figcaption></figure></div>
     </div>
   </div>
 </div>
@@ -262,13 +273,13 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <h2>從一支影片，到凱道上的生日願望</h2>
     <p class="sub">2025 年底我做那支影片時，事情還在醞釀。十個月後，它已成了全台環團關注的議題。</p>
     <ol class="tl">
-      <li><div class="d">2025/12</div><p>製作影片〈拯救百年橋頭森林〉，整理第三期開發計畫與替代方案。</p></li>
       <li><div class="d">2025/8</div><p>在地志工與團體發起「搶救橋頭糖廠百頃森林」運動。</p></li>
+      <li><div class="d">2025/12</div><p>製作影片〈拯救百年橋頭森林〉，整理第三期開發計畫與替代方案。</p></li>
       <li><div class="d">2026/1/7</div><p>環團提出「新 1-1」替代路線：改走既有道路、直接銜接青埔站，宣稱可保留百公頃森林與糖廠，並少徵收私有地。</p></li>
       <li><div class="d">2026/3</div><p>橋頭 17 位里長公開表態支持道路開發，批評環團阻礙發展；環團與里長在說明場合爆發口角。</p></li>
       <li><div class="d">2026/5/18</div><p>新市鎮三期第四次會議於橋頭區公所召開，焦點是 60 米寬「1-1 道路」是否照原規劃貫穿林地，雙方未達共識；5/18–22 都委會密集現勘與專案小組會議。</p></li>
-      <li><div class="d">2026/6/24</div><p>開發案進行公益性及必要性審查。</p></li>
       <li><div class="d">2026/5 下旬</div><p>護樹團體指出區段徵收審議小組的一位委員兼主席同時擔任台糖獨立董事，批「球員兼裁判」；5/27 國土署回應該委員已依規請假迴避，並表示小組意見僅供大會參考。（詳見深讀第 6 段）</p></li>
+      <li><div class="d">2026/6/24</div><p>開發案進行公益性及必要性審查。</p></li>
       <li><div class="d">2026/7/6</div><p>環團要求重啟完整環評，批評以「環差分析」切割闖關；環境部長彭啓明表示依法審查，與原環評承諾不同就須辦理變更。</p></li>
       <li><div class="d">2026/7/21</div><p>都委會第 1104 次大會<strong>修正後原則同意</strong>：部分道路改為綠園道、規劃約 21 公頃公園兼滯洪池；會議限制媒體與民眾旁聽引發爭議。民團帶著 4,000 人連署在場外抗議。修正版仍須補辦公展、說明會後才核定，最快 2027 年底展開區段徵收。</p></li>
       <li class="ama"><div class="d">2026/9/4</div><p>蔣黃女在兒子與森林城市協會陪同下，登記參選高雄市議員第三選區。</p></li>
@@ -294,11 +305,10 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <div class="grid2" style="margin-top:44px;align-items:center">
       <div>
         <h3>森林，是擋住河水的海綿</h3>
-        <p>這片林地緊鄰典寶溪，是天然的洪泛空間。護樹團體估算它能吸收約 175 萬噸洪水，相當於 9 座寶業滯洪池。計畫若將土地填高約 1.6 米，水就得往別處去——凱米（2024）與康芮（2025）颱風時，楠梓、橋頭都曾嚴重淹水。</p>
-        <p>官方的修正版在典寶溪沿岸規劃約 20 公頃公園兼滯洪池，以 10 年重現期距設計，吸納開發後增加的逕流。但逢甲大學學者在公視《我們的島》指出：現行規劃只處理基地內的逕流，<strong>沒有做到整個河川系統的調控</strong>。</p>
-        <p class="figcap">175 萬噸為護樹團體與影片製作時（2025/12）的估算。</p>
+        <p>這片林地緊鄰典寶溪、地勢低窪，本身就是天然的洪泛空間。凱米（2024）、康芮（2025）颱風時，下游的楠梓、橋頭都曾嚴重淹水。</p>
+        <p>右圖把兩種做法放上天秤：一邊是深根透水的百頃林地（護樹團體估算可吸收約 175 萬噸洪水），一邊是填高 1.6 米後另闢的 21 公頃滯洪池。夠不夠？見<a href="#deep">深讀第 5 段</a>。</p>
       </div>
-      <div class="fig"><img src="img/sponge.jpg" alt="森林土壤像海綿吸收洪水的示意圖" loading="lazy"></div>
+      <div><figure class="aifig"><img src="img/ai-sponge.jpg" alt="天然海綿與人造滯洪池對照圖" loading="lazy" data-cap="天然海綿與人造滯洪池對照圖｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>175 萬噸為護樹團體估算值。<span class="aitag">AI 示意</span></figcaption></figure></div>
     </div>
   </div>
 </section>
@@ -309,11 +319,11 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <h2>一道將撕裂大地的傷疤<span class="era new">已更新至 2026/10</span></h2>
     <p class="sub">高雄新市鎮後期發展區（第三期）</p>
     <div class="grid2" style="align-items:center">
-      <div class="fig"><img src="img/roadmap.jpg" alt="1-1號道路貫穿森林示意圖" loading="lazy"></div>
+      <div><figure class="aifig"><img src="img/ai-road60.jpg" alt="60 米寬 1-1 道路切過糖廠示意圖" loading="lazy" data-cap="60 米寬 1-1 道路切過糖廠示意圖｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>1-1 道路的三個衝突：歷史的斷裂、生態的孤島、學童的危機。實際位置見下方地圖。<span class="aitag">AI 示意</span></figcaption></figure></div>
       <div>
-        <p>計畫要開闢一條 <strong>60 米寬的「1-1 號道路」</strong>，橫向穿過糖廠森林與文化區，腰斬五分車軌道，並經過興糖國小門口；捷運紫線也將切過林地。原本的台糖林地，大多將變更為住商建地。</p>
-        <p>2026/7 通過的修正版，把部分道路改成綠園道，並把平地造林地改為約 21 公頃公園兼滯洪池；但 <strong>1-1 道路仍是串聯一至四期的主要幹道</strong>，護樹團體的改道訴求並未被採納。</p>
-        <p>官方的理由，是半導體 S 廊帶帶來的住宅需求與在地交通。但影片裡我問過：依台積電廠區員工推估，真實新增的住房需求有那麼大嗎？（官方說法約 1 萬戶，影片當時推估約 4,000–8,000 戶）一、二期仍有大片閒置土地，橋頭周邊也有上萬間空屋。</p>
+        <p>第三期約 219 公頃，大半是台糖土地。計畫把林地與蔗田變更為住宅區、商業區，再以區段徵收整體開發；主幹是一條 <strong>60 米寬的 1-1 道路</strong>。</p>
+        <p>2026/7 通過的修正版把部分道路改為綠園道、增設約 21 公頃公園兼滯洪池，但 <strong>1-1 仍是串聯一至四期的主要幹道</strong>，改道訴求未被採納。</p>
+        <p>官方的理由是半導體 S 廊帶帶來的住宅與交通需求；需求估算是否合理，是爭議核心之一（見<a href="#deep">深讀</a>）。</p>
       </div>
     </div>
     <div class="stats">
@@ -481,6 +491,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <div class="q"><b>02</b><h3>綠地該變成誰的資產？</h3><p>國營事業的造林地，透過區段徵收變成高價建地。這是全台平地造林屆期後都會遇到的問題。</p></div>
       <div class="q"><b>03</b><h3>路非走那裡不可嗎？</h3><p>環團提出「新 1-1」改道方案，修正版未採納，官方也還沒公開說明兩案比較。</p></div>
     </div>
+    <div style="margin:0 0 26px"><figure class="aifig"><img src="img/ai-layers.jpg" alt="爭議的三個層次示意圖" loading="lazy" data-cap="爭議的三個層次示意圖｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>三個層次的碰撞：居住與土地、水文與氣候、交通與文資。<span class="aitag">AI 示意</span></figcaption></figure></div>
 
     <details open>
       <summary><span class="no">1</span>這片「森林」到底是什麼？</summary>
@@ -559,21 +570,6 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       </div>
     </details>
 
-    <details>
-      <summary><span class="no">7</span>各方要的是什麼？</summary>
-      <div class="in" style="padding-left:22px">
-        <div class="tablewrap"><table class="who">
-          <tr><th>角色</th><th>要什麼</th><th>主要論點</th></tr>
-          <tr><td>國土署（主辦）</td><td>照修正版推動</td><td>支援半導體、解決交通、已劃文化景觀保存區</td></tr>
-          <tr><td>台糖（最大地主）</td><td>領回建地、活化資產</td><td>經濟造林非原始林、只租不售</td></tr>
-          <tr><td>高雄市府</td><td>樂觀其成</td><td>權責在中央、兼顧發展與環境</td></tr>
-          <tr><td>橋頭里長</td><td>加速開發</td><td>被糖廠用地包圍數十年，翻轉機會</td></tr>
-          <tr><td>護樹團體／森林阿嬤</td><td>保留林地、道路改道</td><td>需求被誇大、淹水、生態、程序不公</td></tr>
-          <tr><td>市長候選人</td><td>都說「平衡」</td><td>皆未明確承諾改道</td></tr>
-        </table></div>
-      </div>
-    </details>
-
     <h3 style="margin-top:30px">還缺的三份資料</h3>
     <p style="margin:0;font-size:15.5px">只要這三份資料公開，爭議會清楚很多。這也是最實際、最不分立場的要求。</p>
     <div class="gap">
@@ -588,10 +584,10 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <div class="wrap">
     <div class="label">兩條路，兩種未來</div>
     <h2>是短期的土地利益，還是永續的生態價值？<span class="era old">影片 2025/12＋2026 補充</span></h2>
-    <p class="sub">我們的選擇，將決定這片土地的百年命運。</p>
+    <p class="sub">我們的選擇，將決定這片土地的百年命運。下方兩張圖皆為 AI 生成示意，點擊可放大。</p>
     <div class="roads">
       <div class="road steel">
-        <img src="img/steelroad.jpg" alt="鋼鐵之路示意" loading="lazy">
+        <img src="img/ai-steel.jpg" alt="開發工地與林地開挖" loading="lazy" data-cap="開發工地與林地開挖｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報">
         <div class="body">
           <h3>鋼鐵之路：照現行方案</h3>
           <ul>
@@ -602,21 +598,16 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
         </div>
       </div>
       <div class="road life">
-        <img src="img/lifepath.jpg" alt="生命之路示意" loading="lazy">
+        <img src="img/ai-lifepath.jpg" alt="森林文化公園願景" loading="lazy" data-cap="森林文化公園願景｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報">
         <div class="body">
           <h3>生命之路：更聰明的做法</h3>
           <ul>
-            <li><b>道路改道</b>：影片當時提出繞至外圍（如 1-3 號道路、國道邊坡）。2026 年環團具體提出「新 1-1」路線：利用既有道路、改線到興糖國小南側並直接銜接青埔站；森林阿嬤也在凱道提出同樣訴求。</li>
+            <li><b>道路改道</b>：讓 60 米道路避開林地核心（「新 1-1」方案，見<a href="#deep">深讀第 4 段</a>與<a href="#map">地圖</a>）。</li>
             <li><b>容積轉移</b>：把開發需求導向一、二期已規劃的閒置區。</li>
             <li><b>森林文化公園</b>：仿明治神宮、溪頭，打造「國家都市森林示範區」，影片當時（2025/12）估算每年可創造約 34 億元觀光產值。</li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="grid3" style="margin-top:26px">
-      <div class="box"><h3>👁 要求透明</h3><p>公開 GIS 水文模擬數據，讓所有人看見開發前後的淹水風險變化。</p></div>
-      <div class="box"><h3>💬 要求辯證</h3><p>建立公開協商平台，共同評估道路改道與森林文化公園等替代方案。</p></div>
-      <div class="box"><h3>⚖️ 要求公正</h3><p>委託第三方獨立審計，重新評估開發案真實的經濟與環境效益，並落實利益迴避。</p></div>
     </div>
   </div>
 </section>
@@ -626,11 +617,14 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <div class="label">支持森林阿嬤</div>
     <h2>你的聲音，就是森林的回音</h2>
     <p class="sub">不必住在橋頭，也能幫上忙。</p>
+    <div class="act-wrap">
     <div class="grid2" style="gap:18px">
       <div class="box"><div class="n">01</div><h3>把這頁傳給一個人</h3><p>很多人不知道高雄正有一座百年森林可能消失。分享，是最簡單也最有效的事。</p></div>
       <div class="box"><div class="n">02</div><h3>第三選區的朋友：11/28 去投票</h3><p>如果你或家人的戶籍在岡山、橋頭、燕巢、梓官、彌陀、永安，認識一下這位 83 歲、只為森林參選的候選人。號次 10/23 抽籤後公布。</p></div>
       <div class="box"><div class="n">03</div><h3>關注公共事務</h3><p>追蹤森林城市協會等護樹團體的行動、連署與說明會，在都委會與環評程序中持續發聲。</p></div>
       <div class="box"><div class="n">04</div><h3>親自走一趟糖廠</h3><p>森林阿嬤說，她想邀大家來看看這裡的日出。台灣森林城市協會十月有免費導覽：10/17（六）健走、10/31（六）五分車＋健走，捷運橋頭糖廠站集合。<a href="https://www.fcat2020.org/post/1150915" target="_blank" rel="noopener">看活動資訊 →</a></p></div>
+    </div>
+      <div><figure class="aifig"><img src="img/ai-seedling.jpg" alt="雙手捧著新芽" loading="lazy" data-cap="雙手捧著新芽｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>把手放進土裡的人，才知道樹要長多久。<span class="aitag">AI 示意</span></figcaption></figure></div>
     </div>
     <div class="btns">
       <button class="btn main" id="share" type="button">↗ 分享這一頁</button>
@@ -651,6 +645,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 </section>
 
 <div class="closing">
+  <div class="banner"><figure class="aifig"><img src="img/ai-coexist.jpg" alt="科技園區被森林環抱的願景" loading="lazy" data-cap="科技園區被森林環抱的願景｜AI 生成示意圖，取自〈矽谷與森林的未來抉擇〉簡報"><figcaption>真正的「矽谷」，被自然環抱——科技讓城市強大，森林讓城市永續。<span class="aitag">AI 示意</span></figcaption></figure></div>
   <div class="wrap">
     <p class="big">樹砍了，要再等一百年。<br>森林會記住我們的選擇。</p>
     <p class="small">一同守護我們的未來。</p>
@@ -699,15 +694,31 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <li><a href="https://www.ctwant.com/article/482950/" target="_blank" rel="noopener">CTWANT〈高雄新市鎮三期審議遭質疑 國土署：委員已迴避、程序未定案〉2026/5/28</a></li>
       <li><a href="https://ourisland.pts.org.tw/content/11769" target="_blank" rel="noopener">公視我們的島〈誰來決定新市鎮：橋頭開發與糖業鐵道歷史〉</a></li>
     </ol>
-    <p>插圖取自原始影片簡報（NotebookLM 生成）與 AI 水彩插畫，皆為示意。本頁為個人整理的公民倡議頁面，非候選人官方網站。資料更新至 2026/10/11。</p>
+    <p>插圖取自原始影片簡報（NotebookLM 生成）、〈矽谷與森林的未來抉擇〉簡報（AI 生成，已剔除未經查證的數據與人物肖像）與 AI 水彩插畫，皆為示意。本頁為個人整理的公民倡議頁面，非候選人官方網站。資料更新至 2026/10/11。</p>
   </div>
 </section>
 
 </main>
 <footer>聽，森林的低語・守護橋頭糖廠百頃森林<br>背景音樂〈微光中的勇氣〉masky87 製作（Suno）</footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="圖片放大檢視"><button type="button" aria-label="關閉">×</button><img alt=""><p></p></div>
 <audio id="bgm" src="bgm.mp3" loop preload="auto" autoplay></audio>
 <button class="bgm-btn" id="bgmBtn" type="button" aria-pressed="false" aria-label="背景音樂開關"><span class="eq"><i></i><i></i><i></i></span><span id="bgmLabel">播放音樂</span></button>
 
+<script>
+(function(){
+  var lb=document.getElementById('lb'), li=lb.querySelector('img'), lp=lb.querySelector('p'), last=null;
+  document.querySelectorAll('main img').forEach(function(im){
+    if(im.closest('#qtmap')) return;
+    im.classList.add('zoomable'); im.tabIndex=0; im.setAttribute('role','button');
+    function open(){last=im;li.src=im.currentSrc||im.src;li.alt=im.alt;lp.textContent=im.dataset.cap||im.alt||'';lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('button').focus();}
+    im.addEventListener('click',open);
+    im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
+  });
+  function close(){lb.classList.remove('open');document.body.style.overflow='';if(last)last.focus();}
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close();});
+})();
+</script>
 <script>
 (function(){
   var a=document.getElementById('bgm'), b=document.getElementById('bgmBtn'), lb=document.getElementById('bgmLabel');
