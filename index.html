@@ -94,6 +94,28 @@ h3{font-family:"Noto Serif TC",serif;font-size:21px;line-height:1.45;margin:0 0 
 .era.old{background:#ece8dc;color:#6c6858}
 .era.new{background:#fbf0d9;color:var(--gold)}
 @media (max-width:760px){.steps{grid-template-columns:1fr 1fr}}
+.deep details{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.deep summary{cursor:pointer;list-style:none;padding:16px 22px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:19px;display:flex;align-items:center;gap:12px}
+.deep summary::-webkit-details-marker{display:none}
+.deep summary .no{flex:none;width:30px;height:30px;border-radius:50%;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:15px}
+.deep summary::after{content:"＋";margin-left:auto;color:var(--muted);font-family:"Noto Sans TC",sans-serif}
+.deep details[open] summary::after{content:"－"}
+.deep .in{padding:0 22px 20px 64px;font-size:15.5px}
+.deep .in p{margin:0 0 10px}
+.deep .in ul{margin:0 0 10px;padding-left:20px}
+.deep .in li{margin-bottom:6px}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 30px}
+.qs .q{background:var(--deep);color:#f3f0e4;border-radius:18px;padding:20px 22px}
+.qs .q b{display:block;font-family:"Noto Serif TC",serif;font-size:30px;color:#d9c48a;line-height:1}
+.qs .q h3{color:#fff;font-size:18px;margin:8px 0 6px}
+.qs .q p{margin:0;font-size:14.5px;color:#d8dccb}
+.who{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--paper);border-radius:14px;overflow:hidden}
+.who th,.who td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.who th{background:var(--green-soft);color:var(--deep);font-weight:700}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+.gap{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.gap div{border:1.5px dashed var(--gold);border-radius:14px;padding:12px 14px;font-size:14.5px;background:#fffaf0}
+@media (max-width:760px){.qs,.gap{grid-template-columns:1fr}.deep .in{padding:0 18px 18px}}
 .figcap{font-size:13px;color:var(--muted);margin-top:8px}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 0}
@@ -344,6 +366,92 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   </div>
 </section>
 
+<section id="deep" class="deep">
+  <div class="wrap">
+    <div class="label">深讀・2026/10</div>
+    <h2>砍不砍樹之外，真正該問的三件事</h2>
+    <p class="sub">「砍樹 vs. 不砍」是被簡化的說法。把各方說法攤開來看，爭議其實落在這三個問題上。</p>
+    <div class="qs">
+      <div class="q"><b>01</b><h3>需求是真的嗎？</h3><p>官方說需要約 1 萬戶，影片當時推估約 4,000–8,000 戶，差距將近一倍。估算依據有公開嗎？</p></div>
+      <div class="q"><b>02</b><h3>綠地該變成誰的資產？</h3><p>國營事業的造林地，透過區段徵收變成高價建地。這是全台平地造林屆期後都會遇到的問題。</p></div>
+      <div class="q"><b>03</b><h3>路非走那裡不可嗎？</h3><p>環團提出「新 1-1」改道方案，修正版未採納，官方也還沒公開說明兩案比較。</p></div>
+    </div>
+
+    <details open>
+      <summary><span class="no">1</span>這片「森林」到底是什麼？</summary>
+      <div class="in">
+        <p><b>糖廠本身</b>：1901 年啟用，是台灣第一座現代化機械製糖廠，園區約 25 公頃，有百年建築與五分車鐵道。</p>
+        <p><b>周邊的林子</b>：原本是蔗田。台糖自 2002 年起配合政府「平地造林」政策種樹，獎勵補助期限 20 年，<b>現已屆期</b>。2021 年農業部把台糖造林地分成三類：具生態價值的保留、適合農業的恢復耕作或做農電共生、地力不佳的設太陽光電。也就是說，這些樹本來就站在「補助到期後怎麼辦」的十字路口。</p>
+        <p><b>兩邊都說對了一部分</b>：台糖說這是「經濟造林，不是原始森林」——沒錯；但長了二十多年，已成為 8 種保育類鳥類與螢火蟲的棲地——也是事實。</p>
+        <p><b>面積為什麼差這麼多</b>：台糖說徵收範圍內的人造林約 51 公頃；護樹團體說「百頃」、主張保留約 154 公頃國有林地。差別在於只算徵收範圍，還是糖廠周邊所有林地。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="no">2</span>新市鎮為什麼要開發第三期？</summary>
+      <div class="in">
+        <p><b>歷史包袱</b>：高雄新市鎮是 1988 年為興建中低收入住宅而規劃、1994 年公告。第一期開發 338 公頃，到 2020 年只引進約 8 千人，遠低於原定 24 萬人的目標，立法院預算評估也點名「引進人口數偏低」。目標人口後來下修到 17 萬人。</p>
+        <p><b>這次的理由</b>：橋頭科學園區已啟用，核准 26 家廠商進駐，全面營運後預估約 1.1 萬個就業機會，加上半導體 S 廊帶，官方據此估算住宅需求。</p>
+        <p><b>反方質疑</b>：第一期仍有約 80 公頃住商用地閒置；環團稱周邊空屋逾 13 萬戶；高雄人口連續近十年下滑。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="no">3</span>錢的問題：區段徵收怎麼運作？</summary>
+      <div class="in">
+        <p>區段徵收是政府把整片土地收回、重新規劃道路與公園後，按比例發還一部分建地給原地主（稱「抵價地」）。</p>
+        <ul>
+          <li>第三期約 219–226 公頃，台糖與台灣糖業協會土地占 102–163 公頃（各報導數字不同），是最大地主。</li>
+          <li><b>台糖將領回約 40.72 公頃建地</b>。</li>
+          <li>環團估算台糖獲利 300–555 億元（以鄰近建地每坪約 18 萬元 × 102 公頃計）。</li>
+          <li>台糖回應：只領回 40.72 公頃、採「只租不售」、還要負擔高額地價稅，「絕無大賺 500 億」。</li>
+        </ul>
+        <p><b>結構性的問題</b>：國營事業的綠地一經都市計畫變更，就成為高價建地；若改劃公園，這筆價值就不存在。這也是審查委員兼台糖獨立董事會引發強烈爭議的原因（國土署表示該委員已請假迴避）。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="no">4</span>1-1 道路為什麼要走那裡？</summary>
+      <div class="in">
+        <p><b>官方理由</b>：1-1 道路是串聯新市鎮一至四期、銜接交流道的主要幹道；橋頭長期塞車，里長形容「提早 55 分鐘出門還是塞」。</p>
+        <p><b>替代方案</b>：2026/1 環團提出「新 1-1」，改走既有道路、從興糖國小南側經過、直接銜接青埔站，宣稱路程更短、徵收私有地更少，又能保留森林。</p>
+        <p><b>現況</b>：7 月通過的修正版沒有採納改道，<b>官方也還沒公開說明不採納的理由</b>——這是目前最大的資訊缺口之一。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="no">5</span>淹水風險：滯洪池夠不夠？</summary>
+      <div class="in">
+        <p>修正版在典寶溪旁規劃約 20 公頃公園兼滯洪池，以「10 年重現期距」設計，吸納開發後增加的逕流。</p>
+        <p>逢甲大學曾梓峰教授在公視《我們的島》指出：現行規劃只處理基地內的逕流，<b>沒有做到整個河川系統的調控</b>。凱米（2024）、康芮（2025）颱風時，楠梓、橋頭都曾嚴重淹水。水利署的出流管制計畫仍在審查中。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="no">6</span>各方要的是什麼？</summary>
+      <div class="in" style="padding-left:22px">
+        <div class="tablewrap"><table class="who">
+          <tr><th>角色</th><th>要什麼</th><th>主要論點</th></tr>
+          <tr><td>國土署（主辦）</td><td>照修正版推動</td><td>支援半導體、解決交通、已劃文化景觀保存區</td></tr>
+          <tr><td>台糖（最大地主）</td><td>領回建地、活化資產</td><td>經濟造林非原始林、只租不售</td></tr>
+          <tr><td>高雄市府</td><td>樂觀其成</td><td>權責在中央、兼顧發展與環境</td></tr>
+          <tr><td>橋頭里長</td><td>加速開發</td><td>被糖廠用地包圍數十年，翻轉機會</td></tr>
+          <tr><td>護樹團體／森林阿嬤</td><td>保留林地、道路改道</td><td>需求被誇大、淹水、生態、程序不公</td></tr>
+          <tr><td>市長候選人</td><td>都說「平衡」</td><td>皆未明確承諾改道</td></tr>
+        </table></div>
+      </div>
+    </details>
+
+    <h3 style="margin-top:30px">還缺的三份資料</h3>
+    <p style="margin:0;font-size:15.5px">只要這三份資料公開，爭議會清楚很多。這也是最實際、最不分立場的要求。</p>
+    <div class="gap">
+      <div>🌳 <b>逐株樹木普查</b><br>到底有多少樹、樹種與胸徑分布？</div>
+      <div>💧 <b>流域尺度水文模擬</b><br>不只基地內，整條典寶溪的淹水風險變化。</div>
+      <div>🛣 <b>舊 1-1 與新 1-1 比較</b><br>交通效益、徵收成本、生態衝擊並列。</div>
+    </div>
+  </div>
+</section>
+
 <section id="roads">
   <div class="wrap">
     <div class="label">兩條路，兩種未來</div>
@@ -445,6 +553,13 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
       <li><a href="https://wp.taronews.tw/2026/09/21/1208710/" target="_blank" rel="noopener">芋傳媒《農藝女孩專欄》〈橋頭糖廠砍樹爭議，不能和台北行道樹混為一談〉2026/9/21</a></li>
       <li><a href="https://udn.com/news/story/7327/9214977" target="_blank" rel="noopener">聯合報〈高雄橋頭新市鎮3期開發 遭質疑毀糖廠森林〉（台糖：人造林約51公頃）</a></li>
       <li><a href="https://www.storm.mg/article/11141511" target="_blank" rel="noopener">風傳媒〈環團抗議橋頭糖廠「百頃森林變建地」 台糖回應了：原本就是造林〉2026/6/15</a></li>
+      <li><a href="https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=44915&pid=208258" target="_blank" rel="noopener">立法院〈高雄新市鎮開發引進人口數偏低〉預算評估</a></li>
+      <li><a href="https://www.taisugar.com.tw/circular/CP2.aspx?n=11430" target="_blank" rel="noopener">台糖〈平地造林屆期後資源利用規劃〉</a></li>
+      <li><a href="https://www.ctwant.com/article/485328/" target="_blank" rel="noopener">CTWANT〈高雄新市鎮第三期開發案爭議 台糖5點聲明澄清〉2026/6/15</a></li>
+      <li><a href="https://money.udn.com/money/story/7307/9580479" target="_blank" rel="noopener">經濟日報〈高雄新市鎮3期24日開土徵大會 環團籲排除台糖綠地〉</a></li>
+      <li><a href="https://ourisland.pts.org.tw/content/12075" target="_blank" rel="noopener">公視我們的島〈該如何看待高雄新市鎮三期的發展？ft.曾梓峰〉</a></li>
+      <li><a href="https://estate.ltn.com.tw/article/26541" target="_blank" rel="noopener">自由時報地產天下〈橋科正式啟用 將創1.1萬就業機會〉</a></li>
+      <li><a href="https://www.twreporter.org/a/afforestation-in-the-plain-area-1" target="_blank" rel="noopener">報導者〈那些長不大的樹──平地造林20年〉</a></li>
       <li><a href="https://ourisland.pts.org.tw/content/11769" target="_blank" rel="noopener">公視我們的島〈誰來決定新市鎮：橋頭開發與糖業鐵道歷史〉</a></li>
     </ol>
     <p>插圖取自原始影片簡報（NotebookLM 生成）與 AI 水彩插畫，皆為示意。本頁為個人整理的公民倡議頁面，非候選人官方網站。資料更新至 2026/10/11。</p>
