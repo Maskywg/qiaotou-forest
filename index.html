@@ -6,22 +6,23 @@
 <title>聽，森林的低語｜守護橋頭糖廠百頃森林・支持森林阿嬤</title>
 <meta name="description" content="橋頭糖廠森林議題，2026/11/21 查證更新：審議進度、五位高雄市長候選人公開態度、日期來源與查證限制。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="橋頭糖廠森林｜議題進度與五位市長候選人公開態度">
+<meta property="og:title" content="八十三歲那年，她決定替森林說話｜守護橋頭糖廠森林">
 <meta property="og:description" content="2026/11/22 新增三欄對照圖出處查證與分區說明；候選人公開態度查證至 11/21，附來源與限制。">
-<meta property="og:image" content="https://maskywg.github.io/qiaotou-forest/img/og-update-20261122.jpg">
-<meta property="og:image:secure_url" content="https://maskywg.github.io/qiaotou-forest/img/og-update-20261122.jpg">
+<meta property="og:image" content="https://maskywg.github.io/qiaotou-forest/img/og-forest-20261122.jpg">
+<meta property="og:image:secure_url" content="https://maskywg.github.io/qiaotou-forest/img/og-forest-20261122.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="橋頭糖廠森林：三欄對照圖出處與正確性；圖片查證更新 2026.11.22">
+<meta property="og:image:alt" content="森林阿嬤站在老樹旁的水彩插畫，標題：八十三歲，她替森林說話">
 <meta property="og:site_name" content="守護橋頭糖廠森林">
 <meta property="og:url" content="https://maskywg.github.io/qiaotou-forest/">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="橋頭糖廠森林｜議題進度與五位市長候選人公開態度">
+<meta name="twitter:title" content="八十三歲那年，她決定替森林說話｜守護橋頭糖廠森林">
 <meta name="twitter:description" content="2026/11/22 新增三欄對照圖出處查證與分區說明；候選人公開態度查證至 11/21，附來源與限制。">
-<meta name="twitter:image" content="https://maskywg.github.io/qiaotou-forest/img/og-update-20261122.jpg">
-<meta name="twitter:image:alt" content="橋頭糖廠森林：三欄對照圖出處與正確性，2026.11.22 查證">
+<meta name="twitter:image" content="https://maskywg.github.io/qiaotou-forest/img/og-forest-20261122.jpg">
+<meta name="twitter:image:alt" content="森林阿嬤站在老樹旁的水彩插畫，標題：八十三歲，她替森林說話">
+<link rel="canonical" href="https://maskywg.github.io/qiaotou-forest/">
 <meta name="theme-color" content="#23361f">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -868,7 +869,7 @@ footer .checked{display:block;font-size:14px}
     el.textContent = d>0 ? d+' 天' : (d===0 ? '就是今天' : done);
   }
   set('cd-vote','2026-11-28T08:00:00+08:00','投票日已過');
-  var url=location.href.split('#')[0], title=document.title;
+  var url=document.querySelector('link[rel="canonical"]').href, title=document.title;
   document.getElementById('line').href='https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(url);
   document.getElementById('share').addEventListener('click',function(){
     if(navigator.share){navigator.share({title:title,url:url}).catch(function(){});}
