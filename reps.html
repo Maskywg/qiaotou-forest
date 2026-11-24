@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高雄各級民代與候選人立場盤點｜守護橋頭糖廠百頃森林</title>
+<meta name="description" content="整理現任高雄立法委員、115年高雄市議員候選人（第3、4選區）與橋頭基層里長對橋頭糖廠森林與高雄新市鎮三期議題之公開立場與發言紀錄。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="高雄各級民代與候選人立場盤點｜守護橋頭糖廠森林">
+<meta property="og:description" content="上至全國立委、115年高雄市議員候選人，下至橋頭17里里長，對橋頭糖廠百頃森林與新市鎮三期開發之公開表態與查證整理。">
+<meta property="og:url" content="https://maskywg.github.io/qiaotou-forest/reps.html">
+<meta property="og:locale" content="zh_TW">
+<meta name="theme-color" content="#23361f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f4ea; --paper:#fffdf7; --ink:#2b2a24; --muted:#6c6858;
+  --green:#3d6a3a; --green-soft:#e3ecd9; --brick:#a9502e; --brick-soft:#f4e2d6;
+  --gold:#b07a1e; --gold-soft:#f8eed8; --line:#e2dccb; --deep:#23361f;
+  --slate:#4c5a67; --slate-soft:#e9edf0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC",system-ui,sans-serif;line-height:1.8;font-size:16.5px}
+a{color:var(--green)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+header.top{background:var(--deep);color:#fff;padding:28px 0 36px;border-bottom:4px solid var(--green)}
+.back{display:inline-flex;align-items:center;gap:6px;color:#e3ecd9;text-decoration:none;font-size:14.5px;border:1px solid rgba(227,236,217,.4);padding:5px 14px;border-radius:99px;margin-bottom:16px}
+.back:hover{background:rgba(255,255,255,.1)}
+header.top h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(26px,4vw,42px);line-height:1.35;margin:0 0 10px}
+header.top p{margin:0;color:#e8e4d8;max-width:780px;font-size:15.5px}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:24px 0 20px}
+.stat-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.stat-card b{display:block;font-family:"Noto Serif TC",serif;font-size:28px;color:var(--green);line-height:1.2}
+.stat-card span{font-size:13.5px;color:var(--muted)}
+
+.controls{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.controls label{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:4px;min-width:170px;flex:1}
+.controls select,.controls input{font-family:inherit;font-size:15px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+.controls input:focus,.controls select:focus{outline:2px solid var(--green);border-color:var(--green)}
+
+.tablewrap{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow-x:auto;box-shadow:0 6px 20px rgba(35,54,31,.05)}
+table{width:100%;border-collapse:collapse;min-width:860px;font-size:15px}
+thead th{background:#f1ecdd;color:var(--deep);text-align:left;padding:13px 14px;font-weight:700;border-bottom:2px solid var(--line);white-space:nowrap}
+tbody td,tbody th{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:none}
+tbody tr:hover{background:#faf6eb}
+
+.badge{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.b-forest{background:var(--green-soft);color:var(--green)}
+.b-dev{background:var(--brick-soft);color:var(--brick)}
+.b-mid{background:var(--gold-soft);color:#8a5d10}
+.b-none{background:var(--slate-soft);color:var(--slate)}
+.meta-sub{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+
+.note-box{margin:24px 0 40px;background:var(--paper);border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:16px 20px;font-size:14.5px;color:var(--ink);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.note-box h2{font-family:"Noto Serif TC",serif;font-size:18px;margin:0 0 8px;color:var(--deep)}
+.note-box ul{margin:8px 0 0;padding-left:20px}
+footer{padding:24px 0 40px;text-align:center;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:640px){
+  .controls label{min-width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="index.html">← 回到主頁：守護橋頭糖廠百頃森林</a>
+    <h1>高雄各級民代與候選人立場盤點</h1>
+    <p>彙整現任高雄立法委員、115 年（2026 年）高雄市議員候選人（第 3 選區橋頭岡山等、第 4 選區左營楠梓）與橋頭基層里長，針對「橋頭糖廠百頃森林／高雄新市鎮三期／1-1 道路」議題之公開表態與發言紀錄。查證整理至 2026/11/24。</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="stats" aria-label="統計摘要">
+    <div class="stat-card"><b id="stat-total">0</b><span>目前收錄對象（人／團體）</span></div>
+    <div class="stat-card"><b id="stat-public">0</b><span>已有公開表態或相關紀錄</span></div>
+    <div class="stat-card"><b id="stat-pending">0</b><span>尚無明確公開表態紀錄</span></div>
+    <div class="stat-card"><b id="stat-shown">0</b><span>目前篩選顯示筆數</span></div>
+  </section>
+
+  <section class="controls" aria-label="篩選與搜尋">
+    <label>
+      層級／選區篩選
+      <select id="filter-level">
+        <option value="all">全部層級</option>
+        <option value="全國立委">全國立委（含市長候選人）</option>
+        <option value="第3選區">115年市議員候選人（第3選區：橋頭、岡山等）</option>
+        <option value="第4選區">115年市議員候選人（第4選區：左營、楠梓）</option>
+        <option value="跨區現任議員">跨區現任市議員</option>
+        <option value="基層里長">基層里長／里長聯誼會</option>
+      </select>
+    </label>
+    <label>
+      立場傾向篩選
+      <select id="filter-stance">
+        <option value="all">全部立場</option>
+        <option value="forest">偏護樹／保留或要求檢討</option>
+        <option value="mid">呼籲協商／選戰攻防待明確表態</option>
+        <option value="dev">偏支持開發／加速交通建設</option>
+        <option value="none">尚無明確公開表態紀錄</option>
+      </select>
+    </label>
+    <label>
+      關鍵字搜尋（姓名、選區、發言內容）
+      <input type="search" id="filter-search" placeholder="例如：蔣黃女、邱志偉、公聽會…">
+    </label>
+  </section>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">層級</th>
+          <th scope="col">選區／角色</th>
+          <th scope="col">姓名（號次／黨籍）</th>
+          <th scope="col">身分別</th>
+          <th scope="col">公開立場分類</th>
+          <th scope="col">發言與紀錄摘要</th>
+        </tr>
+      </thead>
+      <tbody id="reps-tbody"></tbody>
+    </table>
+  </div>
+
+  <section class="note-box">
+    <h2>資料查證說明、限制與持續更新工具</h2>
+    <ul>
+      <li>本表依據公開新聞報導、高雄市議會公聽會紀錄、中選會 115 年候選人名單及主頁既有查證資料彙整；標註「尚無明確公開表態紀錄」者，僅代表截至 2026/11/24 未檢索到該民代針對本案的公開媒體發言，不代表其支持或反對特定立場。</li>
+      <li>高雄市長候選人之完整逐項比對，請同時參閱主頁「<a href="index.html#politics">五位市長候選人，對橋糖森林說了什麼？</a>」章節。</li>
+      <li>本專案亦附有 Google Colab 爬蟲程式 <a href="qiaotou_forest_reps_crawler.ipynb" download>qiaotou_forest_reps_crawler.ipynb</a>，可自動透過 Google News RSS 持續追蹤上述民代與候選人的最新公開發言並匯出 CSV／JSON。</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    守護橋頭糖廠百頃森林｜<a href="index.html">回到主頁</a>
+  </div>
+</footer>
+
+<script>
+const REPS_DATA = [
+  // 全國立委
+  {
+    levelGroup: "全國立委",
+    level: "全國立委",
+    district: "高雄市第 2 選區（橋頭、岡山、路竹等）",
+    name: "邱志偉",
+    party: "民主進步黨",
+    role: "現任立委（本案直接選區）",
+    stanceType: "dev",
+    stanceLabel: "偏支持開發／加速交通",
+    summary: "面對橋頭科學園區啟用後的車潮壓力，多次在立法院質詢與地方協調中敦促中央加速推動橋頭新市鎮聯外道路（含 1-1 號道路）與交通建設。"
+  },
+  {
+    levelGroup: "全國立委",
+    level: "全國立委",
+    district: "高雄市第 8 選區／2026 高雄市長候選人",
+    name: "賴瑞隆（5 號）",
+    party: "民主進步黨",
+    role: "現任立委／市長候選人",
+    stanceType: "mid",
+    stanceLabel: "選戰攻防焦點／強調兼顧",
+    summary: "主張開發與永續兼顧；10/27、11/20 競辦表示收到陳情並將向中央反映不同意見、尋求兼顧方案。11/16 遭蔣黃女陣營指其政見支持第三期並下辯論戰帖（詳細查證見主頁）。"
+  },
+  {
+    levelGroup: "全國立委",
+    level: "全國立委（不分區）",
+    district: "高雄責任區／2026 高雄市長候選人",
+    name: "柯志恩（3 號）",
+    party: "中國國民黨",
+    role: "現任立委／市長候選人",
+    stanceType: "mid",
+    stanceLabel: "選戰攻防焦點／主張盡量保留",
+    summary: "5/19 報導主張開發應優先盡量保留森林，兼顧永續與地方需求；10/27 團隊收下護林承諾書帶回研議，尚未確認具體承諾 1-1 改道或取消第三期（詳細查證見主頁）。"
+  },
+  {
+    levelGroup: "全國立委",
+    level: "全國立委",
+    district: "高雄市第 1 選區（大旗美等）",
+    name: "邱議瑩",
+    party: "民主進步黨",
+    role: "現任立委",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "目前公開報導主要聚焦於所屬選區與委員會業務，尚無針對橋頭糖廠百頃森林之明確公開定調紀錄。"
+  },
+  {
+    levelGroup: "全國立委",
+    level: "全國立委",
+    district: "高雄市第 3 選區（左營、楠梓）",
+    name: "李柏毅",
+    party: "民主進步黨",
+    role: "現任立委",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "選區緊鄰橋頭；審議期間部分高雄民代曾就公民參與及轉達地方陳情回應，尚無針對本案森林保留或開發之單一明確公開表態紀錄。"
+  },
+  {
+    levelGroup: "全國立委",
+    level: "全國立委",
+    district: "高雄市第 4 選區（仁武、鳥松等）",
+    name: "林岱樺",
+    party: "民主進步黨",
+    role: "現任立委",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+  {
+    levelGroup: "全國立委",
+    level: "全國立委",
+    district: "高雄市第 5 選區（三民、苓雅部分）",
+    name: "李昆澤",
+    party: "民主進步黨",
+    role: "現任立委",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+  {
+    levelGroup: "全國立委",
+    level: "全國立委",
+    district: "高雄市第 6 選區（鼓山、鹽埕等）",
+    name: "黃捷",
+    party: "民主進步黨",
+    role: "現任立委",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+  {
+    levelGroup: "全國立委",
+    level: "全國立委",
+    district: "高雄市第 7 選區（鳳山）",
+    name: "許智傑",
+    party: "民主進步黨",
+    role: "現任立委",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+
+  // 115年市議員候選人 - 第3選區（8人）
+  {
+    levelGroup: "第3選區",
+    level: "115年市議員候選人",
+    district: "第 3 選區（橋頭、岡山、燕巢、永安、彌陀、梓官）",
+    name: "1 號 方信淵",
+    party: "中國國民黨",
+    role: "現任議員",
+    stanceType: "dev",
+    stanceLabel: "偏支持開發／加速建設",
+    summary: "曾在市議會質詢關注新市鎮第一期拖延與第三期進度，主張北高雄作為副都心須加速商業區與基礎設施到位以帶動區域繁榮。"
+  },
+  {
+    levelGroup: "第3選區",
+    level: "115年市議員候選人",
+    district: "第 3 選區（橋頭、岡山等）",
+    name: "2 號 張騏晟",
+    party: "無黨籍",
+    role: "新人參選人",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+  {
+    levelGroup: "第3選區",
+    level: "115年市議員候選人",
+    district: "第 3 選區（橋頭、岡山等）",
+    name: "3 號 宋立彬",
+    party: "中國國民黨",
+    role: "現任議員",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+  {
+    levelGroup: "第3選區",
+    level: "115年市議員候選人",
+    district: "第 3 選區（橋頭、岡山等）",
+    name: "4 號 蔣黃女（森林阿嬤）",
+    party: "無黨籍",
+    role: "新人參選人（護樹陣營代表）",
+    stanceType: "forest",
+    stanceLabel: "堅決護樹／反對破壞森林",
+    summary: "83 歲糖廠志工，以「守護橋頭糖廠百頃森林與老樹」為核心政見參選；反對將森林變更住商用地及 60 米道路切割糖廠，要求原地保留或道路改道，並向市長候選人下公開辯論戰帖。"
+  },
+  {
+    levelGroup: "第3選區",
+    level: "115年市議員候選人",
+    district: "第 3 選區（橋頭、岡山等）",
+    name: "5 號 黃秋媖",
+    party: "民主進步黨",
+    role: "現任議員",
+    stanceType: "mid",
+    stanceLabel: "呼籲協商／兼顧保留",
+    summary: "2025/12 曾共同主持「守護橋頭糖廠百頃森林」公聽會，指出橋頭糖廠為世代累積的文化與生態資產，呼籲中央與市府建立公開透明協商平台，避免倉促定案。"
+  },
+  {
+    levelGroup: "第3選區",
+    level: "115年市議員候選人",
+    district: "第 3 選區（橋頭、岡山等）",
+    name: "6 號 林志誠",
+    party: "民主進步黨",
+    role: "現任議員",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+  {
+    levelGroup: "第3選區",
+    level: "115年市議員候選人",
+    district: "第 3 選區（橋頭、岡山等）",
+    name: "7 號 黃韻涵",
+    party: "中國國民黨",
+    role: "新人參選人",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+  {
+    levelGroup: "第3選區",
+    level: "115年市議員候選人",
+    district: "第 3 選區（橋頭、岡山等）",
+    name: "8 號 蔡秉璁",
+    party: "民主進步黨",
+    role: "新人參選人（前邱志偉團隊執行長）",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+
+  // 115年市議員候選人 - 第4選區（12人）
+  {
+    levelGroup: "第4選區",
+    level: "115年市議員候選人",
+    district: "第 4 選區（左營、楠梓）",
+    name: "李雅慧",
+    party: "民主進步黨",
+    role: "現任議員",
+    stanceType: "mid",
+    stanceLabel: "呼籲協商／兼顧保留",
+    summary: "曾共同主持「守護橋頭糖廠百頃森林」公聽會，主張發展與保留並非絕對對立，呼籲中央與市府建立協商平台整合地方與民團意見。"
+  },
+  {
+    levelGroup: "第4選區",
+    level: "115年市議員候選人",
+    district: "第 4 選區（左營、楠梓）",
+    name: "薛兆基",
+    party: "無黨籍",
+    role: "新人參選人",
+    stanceType: "forest",
+    stanceLabel: "批評市府立場模糊／質疑開發",
+    summary: "曾公開批評高雄市政府與主要政黨面對糖廠開發爭議時立場模糊，質疑在第一期入住率與效益尚未顯現前擴大推動第三期之必要性。"
+  },
+  {
+    levelGroup: "第4選區",
+    level: "115年市議員候選人",
+    district: "第 4 選區（左營、楠梓）",
+    name: "陳麗珍、李雅芬、李眉蓁、白喬茵、陳玫娟",
+    party: "中國國民黨",
+    role: "現任議員（5 位）",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲逐一追蹤最新發言。"
+  },
+  {
+    levelGroup: "第4選區",
+    level: "115年市議員候選人",
+    district: "第 4 選區（左營、楠梓）",
+    name: "黃文志",
+    party: "民主進步黨",
+    role: "現任議員",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲持續追蹤。"
+  },
+  {
+    levelGroup: "第4選區",
+    level: "115年市議員候選人",
+    district: "第 4 選區（左營、楠梓）",
+    name: "張以理、尹立",
+    party: "民主進步黨",
+    role: "新人參選人（2 位）",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲逐一追蹤。"
+  },
+  {
+    levelGroup: "第4選區",
+    level: "115年市議員候選人",
+    district: "第 4 選區（左營、楠梓）",
+    name: "柳淑芳、陳冠宇",
+    party: "無黨籍",
+    role: "新人參選人（2 位）",
+    stanceType: "none",
+    stanceLabel: "尚無明確公開表態紀錄",
+    summary: "尚無針對橋頭糖廠百頃森林／新市鎮三期之明確公開表態紀錄，可由 Colab 爬蟲逐一追蹤。"
+  },
+
+  // 跨區現任議員
+  {
+    levelGroup: "跨區現任議員",
+    level: "跨區現任議員",
+    district: "第 5 選區（仁武、大社、鳥松、大樹）",
+    name: "黃飛鳳",
+    party: "民主進步黨",
+    role: "現任議員",
+    stanceType: "mid",
+    stanceLabel: "呼籲協商／兼顧保留",
+    summary: "曾與黃秋媖、李雅慧共同主持「守護橋頭糖廠百頃森林」公聽會，呼籲建立公開協商平台避免倉促定案引發不可逆生態破壞。"
+  },
+
+  // 基層里長
+  {
+    levelGroup: "基層里長",
+    level: "基層里長",
+    district: "橋頭區全區 17 里",
+    name: "橋頭區里長聯誼會／17 位里長（含橋南里長蘇道明、中崎里長蘇招治等）",
+    party: "跨黨派／無黨籍",
+    role: "現任里長",
+    stanceType: "dev",
+    stanceLabel: "公開力挺開發與 1-1 道路",
+    summary: "2026 年 3 月全區 17 位里長聯合署名並帶領居民遊行陳情，強調橋頭長期嚴重塞車（「沒有三期，橋科變死期」），認為 1-1 道路與新市鎮三期是解決交通瓶頸與帶動地方繁榮的關鍵，並反駁環團「百頃美麗森林」說法。"
+  }
+];
+
+const BADGE_CLASS = {
+  forest: "b-forest",
+  dev: "b-dev",
+  mid: "b-mid",
+  none: "b-none"
+};
+
+const tbody = document.getElementById("reps-tbody");
+const fLevel = document.getElementById("filter-level");
+const fStance = document.getElementById("filter-stance");
+const fSearch = document.getElementById("filter-search");
+
+function updateStats(filteredCount) {
+  document.getElementById("stat-total").textContent = REPS_DATA.length;
+  document.getElementById("stat-public").textContent = REPS_DATA.filter(r => r.stanceType !== "none").length;
+  document.getElementById("stat-pending").textContent = REPS_DATA.filter(r => r.stanceType === "none").length;
+  document.getElementById("stat-shown").textContent = filteredCount;
+}
+
+function render() {
+  const lv = fLevel.value;
+  const st = fStance.value;
+  const q = fSearch.value.trim().toLowerCase();
+
+  const rows = REPS_DATA.filter(r => {
+    if (lv !== "all" && r.levelGroup !== lv) return false;
+    if (st !== "all" && r.stanceType !== st) return false;
+    if (q) {
+      const hay = `${r.level} ${r.district} ${r.name} ${r.party} ${r.role} ${r.stanceLabel} ${r.summary}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  tbody.innerHTML = "";
+  if (rows.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;color:var(--muted);padding:28px">沒有符合條件的紀錄，請調整篩選條件或關鍵字。</td></tr>`;
+    updateStats(0);
+    return;
+  }
+
+  for (const r of rows) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${r.level}</td>
+      <td>${r.district}</td>
+      <th scope="row">${r.name}<span class="meta-sub">${r.party}</span></th>
+      <td>${r.role}</td>
+      <td><span class="badge ${BADGE_CLASS[r.stanceType]}">${r.stanceLabel}</span></td>
+      <td>${r.summary}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+  updateStats(rows.length);
+}
+
+fLevel.addEventListener("change", render);
+fStance.addEventListener("change", render);
+fSearch.addEventListener("input", render);
+render();
+</script>
+</body>
+</html>
