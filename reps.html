@@ -59,6 +59,8 @@ tbody tr:hover{background:#faf6eb}
 .b-mid{background:var(--gold-soft);color:#8a5d10}
 .b-none{background:var(--slate-soft);color:var(--slate)}
 .meta-sub{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+.src-line{margin-top:6px;font-size:13px;color:var(--muted);line-height:1.6}
+.src-line a{color:var(--green)}
 
 .note-box{margin:24px 0 40px;background:var(--paper);border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:16px 20px;font-size:14.5px;color:var(--ink);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .note-box h2{font-family:"Noto Serif TC",serif;font-size:18px;margin:0 0 8px;color:var(--deep)}
@@ -138,12 +140,22 @@ footer{padding:24px 0 40px;text-align:center;font-size:13.5px;color:var(--muted)
   </div>
 
   <section class="note-box">
-    <h2>資料查證說明、限制與持續更新工具</h2>
+    <h2>資料查證說明、來源總覽與限制</h2>
     <ul>
       <li>本表依據公開新聞報導、高雄市議會公聽會紀錄、中選會 115 年候選人名單及主頁既有查證資料彙整；標註「尚無明確公開表態紀錄」者，僅代表截至 2026/11/24 未檢索到該民代針對本案的公開媒體發言，不代表其支持或反對特定立場。</li>
       <li>高雄市長候選人之完整逐項比對，請同時參閱主頁「<a href="index.html#politics">五位市長候選人，對橋糖森林說了什麼？</a>」章節。</li>
       <li>本專案亦附有 Google Colab 爬蟲程式 <a href="qiaotou_forest_reps_crawler.ipynb" download>qiaotou_forest_reps_crawler.ipynb</a>，可自動透過 Google News RSS 持續追蹤上述民代與候選人的最新公開發言並匯出 CSV／JSON。</li>
     </ul>
+    <h3 style="font-family:'Noto Serif TC',serif;font-size:16px;margin:16px 0 6px;color:var(--deep)">主要參考來源清單</h3>
+    <ol style="margin:0;padding-left:20px;line-height:1.8">
+      <li><a href="https://web.cec.gov.tw/api/file/9bd4f559-e527-4f55-a4ef-21653d340f79.pdf" target="_blank" rel="noopener">高雄市選委會：115 年市長、市議員候選人姓名號次表</a>（確認第 3、4 選區候選人名單與號次）</li>
+      <li><a href="https://cissearch.kcc.gov.tw/Upload/Attachment/PublicHearing/3929/5ee2f50e-6376-4331-abdc-972c0ef2e865.pdf" target="_blank" rel="noopener">高雄市議會：2025/12/19「守護橋頭糖廠百頃森林」公聽會邀請書</a>（黃秋媖、李雅慧、黃飛鳳議員主持）</li>
+      <li><a href="https://www.chinatimes.com/realtimenews/20260316002779-260405" target="_blank" rel="noopener">中時新聞網，2026/3/16：〈愛樹不愛人？橋頭 17 里長挺道路開發〉</a>（橋頭 17 位里長與聯誼會立場）</li>
+      <li><a href="https://udn.com/news/story/7327/9510872" target="_blank" rel="noopener">聯合報，2026/5/19：〈闢路vs.森林 柯志恩賴瑞隆都喊永續平衡〉</a>；<a href="https://udn.com/news/story/124652/9839228" target="_blank" rel="noopener">聯合報，2026/10/27</a>；<a href="https://udn.com/news/story/124652/9881362" target="_blank" rel="noopener">聯合報，2026/11/16</a>；<a href="https://tw.news.yahoo.com/83歲-森林阿嬤-守護糖廠森林邀戰賴瑞隆-賴不回應-104645904.html" target="_blank" rel="noopener">中時／Yahoo，2026/11/20</a></li>
+      <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5563312" target="_blank" rel="noopener">自由時報，2026/9/4：〈守護橋頭森林 83 歲蔣黃女登記參選高雄市議員〉</a>；<a href="https://udn.com/news/story/124652/9736377" target="_blank" rel="noopener">聯合報，2026/9/5</a>；<a href="https://udn.com/news/story/124652/9786878" target="_blank" rel="noopener">聯合報，2026/10/1</a></li>
+      <li><a href="https://www.moi.gov.tw/News_Content.aspx?n=4&amp;s=339723&amp;sms=9009" target="_blank" rel="noopener">內政部／國土署，2026/7/21：高雄新市鎮第三期審議說明</a>；<a href="https://www.cna.com.tw/news/aipl/202607210328.aspx" target="_blank" rel="noopener">中央社，2026/7/21</a></li>
+      <li><a href="https://www.ly.gov.tw/" target="_blank" rel="noopener">立法院全球資訊網（第 11 屆立委名單）</a>、<a href="https://www.kcc.gov.tw/" target="_blank" rel="noopener">高雄市議會全球資訊網</a>及 2026/11/24 公開新聞檢索（含自由時報、聯合報、Newtalk 等）。</li>
+    </ol>
   </section>
 </main>
 
@@ -165,7 +177,8 @@ const REPS_DATA = [
     role: "現任立委（本案直接選區）",
     stanceType: "dev",
     stanceLabel: "偏支持開發／加速交通",
-    summary: "面對橋頭科學園區啟用後的車潮壓力，多次在立法院質詢與地方協調中敦促中央加速推動橋頭新市鎮聯外道路（含 1-1 號道路）與交通建設。"
+    summary: "面對橋頭科學園區啟用後的車潮壓力，多次在立法院質詢與地方協調中敦促中央加速推動橋頭新市鎮聯外道路（含 1-1 號道路）與交通建設。",
+    sourceHtml: '來源：<a href="https://www.ly.gov.tw/" target="_blank" rel="noopener">立法院</a>・公開新聞檢索（自由時報、大成報等，2026/11/24 查閱）'
   },
   {
     levelGroup: "全國立委",
@@ -176,7 +189,8 @@ const REPS_DATA = [
     role: "現任立委／市長候選人",
     stanceType: "mid",
     stanceLabel: "選戰攻防焦點／強調兼顧",
-    summary: "主張開發與永續兼顧；10/27、11/20 競辦表示收到陳情並將向中央反映不同意見、尋求兼顧方案。11/16 遭蔣黃女陣營指其政見支持第三期並下辯論戰帖（詳細查證見主頁）。"
+    summary: "主張開發與永續兼顧；10/27、11/20 競辦表示收到陳情並將向中央反映不同意見、尋求兼顧方案。11/16 遭蔣黃女陣營指其政見支持第三期並下辯論戰帖（詳細查證見主頁）。",
+    sourceHtml: '來源：<a href="https://udn.com/news/story/7327/9510872" target="_blank" rel="noopener">聯合報 5/19</a>、<a href="https://udn.com/news/story/124652/9839228" target="_blank" rel="noopener">10/27</a>、<a href="https://udn.com/news/story/124652/9881362" target="_blank" rel="noopener">11/16</a>、<a href="https://tw.news.yahoo.com/83歲-森林阿嬤-守護糖廠森林邀戰賴瑞隆-賴不回應-104645904.html" target="_blank" rel="noopener">中時／Yahoo 11/20</a>'
   },
   {
     levelGroup: "全國立委",
@@ -187,7 +201,8 @@ const REPS_DATA = [
     role: "現任立委／市長候選人",
     stanceType: "mid",
     stanceLabel: "選戰攻防焦點／主張盡量保留",
-    summary: "5/19 報導主張開發應優先盡量保留森林，兼顧永續與地方需求；10/27 團隊收下護林承諾書帶回研議，尚未確認具體承諾 1-1 改道或取消第三期（詳細查證見主頁）。"
+    summary: "5/19 報導主張開發應優先盡量保留森林，兼顧永續與地方需求；10/27 團隊收下護林承諾書帶回研議，尚未確認具體承諾 1-1 改道或取消第三期（詳細查證見主頁）。",
+    sourceHtml: '來源：<a href="https://udn.com/news/story/7327/9372998" target="_blank" rel="noopener">聯合報 3/11</a>、<a href="https://udn.com/news/story/7327/9510872" target="_blank" rel="noopener">5/19</a>、<a href="https://udn.com/news/story/124652/9839228" target="_blank" rel="noopener">10/27</a>'
   },
   {
     levelGroup: "全國立委",
@@ -266,7 +281,8 @@ const REPS_DATA = [
     role: "現任議員",
     stanceType: "dev",
     stanceLabel: "偏支持開發／加速建設",
-    summary: "曾在市議會質詢關注新市鎮第一期拖延與第三期進度，主張北高雄作為副都心須加速商業區與基礎設施到位以帶動區域繁榮。"
+    summary: "曾在市議會質詢關注新市鎮第一期拖延與第三期進度，主張北高雄作為副都心須加速商業區與基礎設施到位以帶動區域繁榮。",
+    sourceHtml: '來源：<a href="https://web.cec.gov.tw/api/file/9bd4f559-e527-4f55-a4ef-21653d340f79.pdf" target="_blank" rel="noopener">高雄市選委會號次表</a>・公開新聞檢索（聯合報議會質詢報導，2026/11/24 查閱）'
   },
   {
     levelGroup: "第3選區",
@@ -299,7 +315,8 @@ const REPS_DATA = [
     role: "新人參選人（護樹陣營代表）",
     stanceType: "forest",
     stanceLabel: "堅決護樹／反對破壞森林",
-    summary: "83 歲糖廠志工，以「守護橋頭糖廠百頃森林與老樹」為核心政見參選；反對將森林變更住商用地及 60 米道路切割糖廠，要求原地保留或道路改道，並向市長候選人下公開辯論戰帖。"
+    summary: "83 歲糖廠志工，以「守護橋頭糖廠百頃森林與老樹」為核心政見參選；反對將森林變更住商用地及 60 米道路切割糖廠，要求原地保留或道路改道，並向市長候選人下公開辯論戰帖。",
+    sourceHtml: '來源：<a href="https://news.ltn.com.tw/news/politics/breakingnews/5563312" target="_blank" rel="noopener">自由時報 9/4</a>、<a href="https://udn.com/news/story/124652/9736377" target="_blank" rel="noopener">聯合報 9/5</a>、<a href="https://udn.com/news/story/124652/9786878" target="_blank" rel="noopener">10/1</a>、<a href="https://web.cec.gov.tw/api/file/9bd4f559-e527-4f55-a4ef-21653d340f79.pdf" target="_blank" rel="noopener">選委會號次表</a>'
   },
   {
     levelGroup: "第3選區",
@@ -310,7 +327,8 @@ const REPS_DATA = [
     role: "現任議員",
     stanceType: "mid",
     stanceLabel: "呼籲協商／兼顧保留",
-    summary: "2025/12 曾共同主持「守護橋頭糖廠百頃森林」公聽會，指出橋頭糖廠為世代累積的文化與生態資產，呼籲中央與市府建立公開透明協商平台，避免倉促定案。"
+    summary: "2025/12 曾共同主持「守護橋頭糖廠百頃森林」公聽會，指出橋頭糖廠為世代累積的文化與生態資產，呼籲中央與市府建立公開透明協商平台，避免倉促定案。",
+    sourceHtml: '來源：<a href="https://cissearch.kcc.gov.tw/Upload/Attachment/PublicHearing/3929/5ee2f50e-6376-4331-abdc-972c0ef2e865.pdf" target="_blank" rel="noopener">高雄市議會公聽會邀請書 (2025/12/19)</a>、<a href="https://web.cec.gov.tw/api/file/9bd4f559-e527-4f55-a4ef-21653d340f79.pdf" target="_blank" rel="noopener">選委會號次表</a>'
   },
   {
     levelGroup: "第3選區",
@@ -356,7 +374,8 @@ const REPS_DATA = [
     role: "現任議員",
     stanceType: "mid",
     stanceLabel: "呼籲協商／兼顧保留",
-    summary: "曾共同主持「守護橋頭糖廠百頃森林」公聽會，主張發展與保留並非絕對對立，呼籲中央與市府建立協商平台整合地方與民團意見。"
+    summary: "曾共同主持「守護橋頭糖廠百頃森林」公聽會，主張發展與保留並非絕對對立，呼籲中央與市府建立協商平台整合地方與民團意見。",
+    sourceHtml: '來源：<a href="https://cissearch.kcc.gov.tw/Upload/Attachment/PublicHearing/3929/5ee2f50e-6376-4331-abdc-972c0ef2e865.pdf" target="_blank" rel="noopener">高雄市議會公聽會邀請書 (2025/12/19)</a>'
   },
   {
     levelGroup: "第4選區",
@@ -367,7 +386,8 @@ const REPS_DATA = [
     role: "新人參選人",
     stanceType: "forest",
     stanceLabel: "批評市府立場模糊／質疑開發",
-    summary: "曾公開批評高雄市政府與主要政黨面對糖廠開發爭議時立場模糊，質疑在第一期入住率與效益尚未顯現前擴大推動第三期之必要性。"
+    summary: "曾公開批評高雄市政府與主要政黨面對糖廠開發爭議時立場模糊，質疑在第一期入住率與效益尚未顯現前擴大推動第三期之必要性。",
+    sourceHtml: '來源：<a href="https://web.cec.gov.tw/api/file/9bd4f559-e527-4f55-a4ef-21653d340f79.pdf" target="_blank" rel="noopener">高雄市選委會名單</a>・公開新聞檢索（Newtalk 等，2026/11/24 查閱）'
   },
   {
     levelGroup: "第4選區",
@@ -424,7 +444,8 @@ const REPS_DATA = [
     role: "現任議員",
     stanceType: "mid",
     stanceLabel: "呼籲協商／兼顧保留",
-    summary: "曾與黃秋媖、李雅慧共同主持「守護橋頭糖廠百頃森林」公聽會，呼籲建立公開協商平台避免倉促定案引發不可逆生態破壞。"
+    summary: "曾與黃秋媖、李雅慧共同主持「守護橋頭糖廠百頃森林」公聽會，呼籲建立公開協商平台避免倉促定案引發不可逆生態破壞。",
+    sourceHtml: '來源：<a href="https://cissearch.kcc.gov.tw/Upload/Attachment/PublicHearing/3929/5ee2f50e-6376-4331-abdc-972c0ef2e865.pdf" target="_blank" rel="noopener">高雄市議會公聽會邀請書 (2025/12/19)</a>'
   },
 
   // 基層里長
@@ -437,7 +458,8 @@ const REPS_DATA = [
     role: "現任里長",
     stanceType: "dev",
     stanceLabel: "公開力挺開發與 1-1 道路",
-    summary: "2026 年 3 月全區 17 位里長聯合署名並帶領居民遊行陳情，強調橋頭長期嚴重塞車（「沒有三期，橋科變死期」），認為 1-1 道路與新市鎮三期是解決交通瓶頸與帶動地方繁榮的關鍵，並反駁環團「百頃美麗森林」說法。"
+    summary: "2026 年 3 月全區 17 位里長聯合署名並帶領居民遊行陳情，強調橋頭長期嚴重塞車（「沒有三期，橋科變死期」），認為 1-1 道路與新市鎮三期是解決交通瓶頸與帶動地方繁榮的關鍵，並反駁環團「百頃美麗森林」說法。",
+    sourceHtml: '來源：<a href="https://www.chinatimes.com/realtimenews/20260316002779-260405" target="_blank" rel="noopener">中時新聞網 2026/3/16</a>・公開新聞檢索（聯合報、自由時報等）'
   }
 ];
 
@@ -483,6 +505,9 @@ function render() {
   }
 
   for (const r of rows) {
+    const srcText = r.sourceHtml || (r.stanceType === "none"
+      ? '來源：<a href="https://web.cec.gov.tw/api/file/9bd4f559-e527-4f55-a4ef-21653d340f79.pdf" target="_blank" rel="noopener">高雄市選委會候選人名冊</a>／<a href="https://www.ly.gov.tw/" target="_blank" rel="noopener">立法院</a>・2026/11/24 公開爬蟲檢索未見本案專題報導'
+      : '來源：2026/11/24 公開新聞與議事資料檢索');
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${r.level}</td>
@@ -490,7 +515,7 @@ function render() {
       <th scope="row">${r.name}<span class="meta-sub">${r.party}</span></th>
       <td>${r.role}</td>
       <td><span class="badge ${BADGE_CLASS[r.stanceType]}">${r.stanceLabel}</span></td>
-      <td>${r.summary}</td>
+      <td>${r.summary}<div class="src-line">${srcText}</div></td>
     `;
     tbody.appendChild(tr);
   }
